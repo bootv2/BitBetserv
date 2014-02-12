@@ -4,15 +4,26 @@ class Account
 private:
 	string username;
 	string password;
-	int id;
-	double wallet = 0;
-	short status = 0;//0 for standard user, 1 for standard moderator, 2 for extended moderator, 3 for full admin
+	int* id;
+	double* wallet = 0;
+	short* status = 0;//0 for standard user, 1 for standard moderator, 2 for extended moderator, 3 for full admin
 public:
 	Account(string usr, string passw, int ID)
 	{
 		username = usr;
 		password = passw;
-		id = ID;
+		id = new int(ID);
+		wallet = new double(0);
+		status = new short(0);
+	}
+
+	void init(string usr, string passw, int ID)
+	{
+		username = usr;
+		password = passw;
+		id = new int(ID);
+		wallet = new double(0);
+		status = new short(0);
 	}
 
 	string getPass()
@@ -22,12 +33,12 @@ public:
 
 	void setStatus(short _st)
 	{
-		status = _st;
+		status = new short(_st);
 	}
 
 	short getStatus()
 	{
-		return status;
+		return *status;
 	}
 
 	string getUsername()
@@ -37,7 +48,7 @@ public:
 
 	int getID()
 	{
-		return id;
+		return *id;
 	}
 
 	bool auth(string usr, string passw)
@@ -50,17 +61,17 @@ public:
 
 	double getWallet()
 	{
-		return wallet;
+		return *wallet;
 	}
 
 	void takeMoney(double moneyToTake)
 	{
-		wallet -= moneyToTake;
+		*wallet -= moneyToTake;
 	}
 
 	void giveMoney(double moneyToGive)
 	{
-		wallet += moneyToGive;
+		*wallet += moneyToGive;
 	}
 };
 

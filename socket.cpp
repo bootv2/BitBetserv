@@ -25,6 +25,7 @@
 */
 
 #include <iostream>
+#include <time.h>
 
 #include "Socket.h"
 
@@ -140,10 +141,44 @@ std::string Socket::ReceiveLine() {
            return "";
          }
      }
-
-     ret += r;
-     if (r == '\n')  return ret;
+	 ret += r;
+	 if (r == '\n') return ret;
    }
+}
+
+std::vector<std::string> Socket::ReceiveLine(int i) {
+	std::vector<std::string> retv;
+	retv.emplace_back("");
+	std::string getret;
+	std::string ret;
+	while (1) {
+		char r;
+
+		switch (recv(s_, &r, 1, 0)) {
+		case 0: // not connected anymore;
+			return retv;
+		case -1:
+			if (errno == EAGAIN) {
+				retv.emplace_back(ret);
+				return retv;
+			}
+			else {
+				// not connected anymore
+				retv.clear();
+				retv.emplace_back("");
+				return retv;
+			}
+		}
+
+		ret += r;
+		getret += r;
+		if (r == '\n')
+		{
+			retv.at(0) = getret;
+			retv.emplace_back(ret);
+			ret.clear();
+		}
+	}
 }
 
 void Socket::SendLine(std::string s) {

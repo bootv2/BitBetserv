@@ -32,6 +32,7 @@
 #include <windows.h>
 #include <sstream>
 #include <iostream>
+#include <vector>
 
 bool RemoveProtocolFromUrl(std::string const& url, std::string& protocol, std::string& rest) {
   TraceFunc("RemoveProtocolFromUrl");
@@ -57,6 +58,118 @@ bool RemoveProtocolFromUrl(std::string const& url, std::string& protocol, std::s
   rest     = url.substr(3+pos_colon);  // Skipping three characters ( '://' )
 
   return true;
+}
+
+void SplitPostReq(std::string _post_req, std::string& path, std::map<std::string, std::string>& params, size_t posStartPath)
+{
+	TraceFunc("SplitPostReq");
+	std::cout << "Entered SplitPostReq()\n";
+	std::cout << _post_req.size() << std::endl << _post_req << std::endl;
+	path = _post_req.substr(5, _post_req.find_first_of(' ') - 1);
+	std::cout << path << std::endl;
+	std::vector<std::string> post_req;
+	int lastIterator = 0;
+	for (int i = 0; i < _post_req.size(); i++)
+	{
+		if (_post_req.at(i) == '\x0d' || _post_req.at(i) == '\x0a')
+		{
+			for (int x = 0; x < _post_req.size(); x++)
+			{
+				if (_post_req.at(x) == '\x0d' || _post_req.at(x) == '\x0a')
+				{
+					std::cout << _post_req.substr(i + 1, x - 1) << " i = " << i << std::endl;//TODO fix empty post_req vector problem
+					post_req.emplace_back(_post_req.substr(i + 1, x - 1));
+					i = x;
+				}
+			}
+		}
+	}
+	for (int i = 0; i < post_req.size(); i++) std::cout << post_req.at(i) << ":" << post_req.at(i).size() << std::endl;
+	post_req.at(0) = post_req.at(0).substr(4, post_req.at(0).size());//delete "POST " from the first line.
+	bool trailerDeleted = false;
+	for (int i = 1; i < post_req.at(0).size(); i++)
+	{
+		for (int x = i; x < post_req.at(0).size(); x++)
+		{
+			if (post_req.at(0).substr(i, x) == "http/1.")
+			{
+				post_req.at(0) = post_req.at(0).substr(0, i);
+				trailerDeleted = true;
+				break;
+			}
+		}
+		if (trailerDeleted) break;
+	}
+
+	path = post_req.at(0);
+
+	trailerDeleted = false;
+
+	int POSTargsline = -1;
+
+	for (int i = 0; i < post_req.size(); i++)
+	{
+		if (post_req.at(i).at(0) = '-')
+			POSTargsline = i;
+	}
+
+	std::string name, val, args;
+	bool loopbreak = false;
+
+	if (POSTargsline == -1) return;
+	else
+	{
+		args = post_req.at(POSTargsline);
+		for (int i = 0; i < args.size(); i++)
+		{
+			for (int x = i; x < args.size(); x++)
+			{
+				if (args.at(x) == '=')
+				{
+					name = args.substr(i, x);
+					i = x;
+					loopbreak = true;
+					break;
+				}
+				if (args.at(x) == '&')
+				{
+					val = args.substr(i, x);
+					params[name] = val;
+					name = "";
+					val = "";
+					loopbreak = true;
+					break;
+				}
+			}
+			if (!loopbreak)
+			{
+				params[name] = val;
+				break;
+			}
+			loopbreak = false;
+		}
+
+	}
+
+
+
+}
+
+std::vector<std::string> ssplit(const std::string &s, char delim, std::vector<std::string> &elems)
+{
+	std::stringstream ss(s);
+	std::string item;
+	while (std::getline(ss, item, delim)) {
+		elems.push_back(item);
+	}
+	return elems;
+}
+
+
+std::vector<std::string> ssplit(const std::string &s, char delim) {
+	std::vector<std::string> elems;
+	ssplit(s, delim, elems);
+	return elems;
 }
 
 void SplitGetReq(std::string get_req, std::string& path, std::map<std::string, std::string>& params) {
@@ -124,6 +237,7 @@ void SplitGetReq(std::string get_req, std::string& path, std::map<std::string, s
         pos_hex ++;
       }
 
+	  std::cout << nam << " " << val << std::endl;
       params.insert(std::map<std::string,std::string>::value_type(nam, val));
     }
   }

@@ -3,8 +3,10 @@ class Round
 {
 private:
 	std::vector<Place> placeMap;
-	double buyInPrice = 0;
-	double growth = 0;
+	double *buyInPrice;
+	double *growth;
+
+	unsigned int placesUsed = 0;
 
 	bool running = true;
 
@@ -18,17 +20,21 @@ private:
 	void payPlayers()
 	{
 		for (int i = 0; i < placeMap.size() - 1; i++)
-			placeMap.at(i).money += growth/2;
+			placeMap.at(i).giveMoney(*growth/2);
 	}
 public:
+	int getAmountOfPlaces()
+	{
+		return placeMap.size();
+	}
 	Round(std::string name, double startPrice, double _growth, int sSalt, std::vector<Account>* _pAccStor)
 	{
 		pAccStor = _pAccStor;
 		creationTime = time(NULL);
 		runningTime = 0;
 		roundName = name;
-		buyInPrice = startPrice;
-		growth = _growth;
+		buyInPrice = new double(startPrice);
+		growth = new double(_growth);
 		genRoundID(sSalt);
 	}
 
@@ -42,7 +48,7 @@ public:
 	{
 		for (auto& Place : placeMap)
 		{
-			if (accID == Place.playerID)
+			if (accID == Place.getPlayerID())
 			{
 				return Place;
 			}
@@ -62,9 +68,9 @@ public:
 			{
 				for (int i = 0; i < pAccStor->size(); i++)
 				{
-					if (Place.playerID == pAccStor->at(i).getID())
+					if (Place.getPlayerID() == pAccStor->at(i).getID())
 					{
-						pAccStor->at(i).giveMoney(Place.money);
+						pAccStor->at(i).giveMoney(Place.getMoney());
 					}
 				}
 			}
@@ -80,15 +86,30 @@ public:
 	{
 		std::string ret = "";
 		ret += "Welcome to BitBet round " + roundName + ".\n";
-		ret += "BuyIN now costs: " + std::to_string(buyInPrice) + " credits.\n";
-		ret += "The current growth is: " + std::to_string(growth) + " credits per BuyIN! \n";
-		ret += "<br><a href='/buyin?session=" + sesID + "&gameid=" + roundID + "'>Click here to buy in!</a> \n";
+		ret += "BuyIN now costs: " + std::to_string(*buyInPrice) + " credits.\n";
+		ret += "The current growth is: " + std::to_string(*growth) + " credits per BuyIN! \n";
+		ret += "<br><a href='/11?session=" + sesID + "&gameid=" + roundID + "'>Click here to buy in!</a> \n";
 		return ret;
 	}
 
 	double getBuyInPrice()
 	{
-		return buyInPrice;
+		return *buyInPrice;
+	}
+
+	double getGrowth()
+	{
+		return *growth;
+	}
+
+	std::vector<unsigned int> getTimeVector()
+	{
+		std::vector<unsigned int> ret;
+		ret.emplace_back(creationTime);
+		ret.emplace_back(runningTime);
+		ret.emplace_back(maxTime);
+		ret.emplace_back(days);
+		return ret;
 	}
 
 	void genRoundID(unsigned int sSalt)
@@ -105,6 +126,14 @@ public:
 		roundID = result;
 	}
 
+	std::string getRoundAttributes()
+	{
+		std::string ret;
+		ret = "Currently, it will cost " + std::to_string(*buyInPrice) + " credits to enter the game. Playing now will put you on the " + std::to_string(placesUsed) + "th position."
+			"The round price grows with " + std::to_string(*growth) + " credits for every entry.";
+		return ret;
+	}
+
 	std::string getRoundID()
 	{
 		return roundID;
@@ -113,8 +142,8 @@ public:
 	void init(std::string name, double _growth, double startPrice, int sSalt)
 	{
 		roundName = name;
-		buyInPrice = startPrice;
-		growth = _growth;
+		buyInPrice = new double(startPrice);
+		growth = new double(_growth);
 		genRoundID(sSalt);
 	}
 
@@ -123,9 +152,10 @@ public:
 		runningTime = time(NULL) - creationTime;
 		maxTime = time(NULL) + (days * 24 * 60 * 60);
 
-		_a.takeMoney(buyInPrice);
-		buyInPrice += growth;
-		placeMap.emplace_back(Place(_a.getID(), 0));
+		_a.takeMoney(*buyInPrice);
+		*buyInPrice += *growth;
+		cout << to_string(*buyInPrice) << "  :  " << to_string(*growth) << endl;
+		placeMap.emplace_back(Place(_a.getID(), 0, placesUsed + 1)); placesUsed++;
 		payPlayers();
 	}
 };

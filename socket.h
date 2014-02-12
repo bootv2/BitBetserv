@@ -31,6 +31,7 @@
 #include <WinSock2.h>
 
 #include <string>
+#include <vector>
 
 
 enum TypeSocket {BlockingSocket, NonBlockingSocket};
@@ -42,6 +43,7 @@ public:
   Socket(const Socket&);
   Socket& operator=(Socket&);
 
+  std::vector<std::string> ReceiveLine(int i);
   std::string ReceiveLine();
   std::string ReceiveBytes();
 

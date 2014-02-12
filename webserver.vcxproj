@@ -14,6 +14,8 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{BD9847D4-C040-453F-9605-C8FC1B1C0EF2}</ProjectGuid>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,6 +125,9 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="base64.cpp" />
     <ClCompile Include="BitBet.cpp" />
+    <ClCompile Include="FileIO.cpp" />
+    <ClCompile Include="HTMLVariables.cpp" />
+    <ClCompile Include="LoadingClass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="md5.cpp" />
     <ClCompile Include="Page.cpp" />
@@ -138,6 +143,10 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="base64.h" />
     <ClInclude Include="BitBet.h" />
+    <ClInclude Include="FileIO.h" />
+    <ClInclude Include="definitions.h" />
+    <ClInclude Include="HTMLVariables.h" />
+    <ClInclude Include="LoadingClass.h" />
     <ClInclude Include="md5.h" />
     <ClInclude Include="Page.h" />
     <ClInclude Include="Place.h" />
@@ -150,7 +159,19 @@
     <ClInclude Include="UrlHelper.h" />
     <ClInclude Include="webserver.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+    <Import Project="packages\boost.1.55.0.16\build\native\boost.targets" Condition="Exists('packages\boost.1.55.0.16\build\native\boost.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('packages\boost.1.55.0.16\build\native\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost.1.55.0.16\build\native\boost.targets'))" />
+  </Target>
 </Project>

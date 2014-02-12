@@ -45,6 +45,7 @@ webserver::request_func webserver::request_func_=0;
 unsigned webserver::Request(void* ptr_s) {
   Socket s = *(reinterpret_cast<Socket*>(ptr_s));
   
+  //std::vector<std::string> lines = s.ReceiveLine(0);
   std::string line = s.ReceiveLine();
   if (line.empty()) {
     return 1;
@@ -52,19 +53,24 @@ unsigned webserver::Request(void* ptr_s) {
 
   http_request req;
 
-  if (line.find("GET") == 0) {
-    req.method_="GET";
-  }
-  else if (line.find("POST") == 0) {
-    req.method_="POST";
-  }
-
   std::string path;
   std::map<std::string, std::string> params;
 
-  size_t posStartPath = line.find_first_not_of(" ",3);
+  std::cout << "entering splitReq functions\n";
 
-  SplitGetReq(line.substr(posStartPath), path, params);
+  size_t posStartPath;
+  if (line.find("GET") == 0) {
+	  posStartPath = line.find_first_not_of(" ", 3);
+	  req.method_ = "GET";
+	  SplitGetReq(line.substr(posStartPath), path, params);
+  }
+  else if (line.find("POST") == 0) {
+	posStartPath = line.find_first_not_of(" ", 4);
+    req.method_="POST";
+	SplitPostReq(line, path, params, posStartPath);
+  }
+
+  std::cout << "splitPostReq got path " << path << std::endl;
 
   req.status_ = "202 OK";
   req.s_      = &s;
@@ -79,17 +85,18 @@ unsigned webserver::Request(void* ptr_s) {
 
   while(1) {
     line=s.ReceiveLine();
+	//std::cout << line << std::endl;
 
     if (line.empty()) break;
 
     unsigned int pos_cr_lf = line.find_first_of("\x0a\x0d");
     if (pos_cr_lf == 0) break;
 
-    line = line.substr(0,pos_cr_lf);
+	line = line.substr(0, pos_cr_lf);
 
-    if (line.substr(0, authorization.size()) == authorization) {
+	if (line.substr(0, authorization.size()) == authorization) {
       req.authentication_given_ = true;
-      std::string encoded = line.substr(authorization.size());
+	  std::string encoded = line.substr(authorization.size());
       std::string decoded = base64_decode(encoded);
 
       unsigned int pos_colon = decoded.find(":");
@@ -97,17 +104,17 @@ unsigned webserver::Request(void* ptr_s) {
       req.username_ = decoded.substr(0, pos_colon);
       req.password_ = decoded.substr(pos_colon+1 );
     }
-    else if (line.substr(0, accept.size()) == accept) {
-      req.accept_ = line.substr(accept.size());
+	else if (line.substr(0, accept.size()) == accept) {
+		req.accept_ = line.substr(accept.size());
     }
-    else if (line.substr(0, accept_language.size()) == accept_language) {
-      req.accept_language_ = line.substr(accept_language.size());
+	else if (line.substr(0, accept_language.size()) == accept_language) {
+		req.accept_language_ = line.substr(accept_language.size());
     }
-    else if (line.substr(0, accept_encoding.size()) == accept_encoding) {
-      req.accept_encoding_ = line.substr(accept_encoding.size());
+	else if (line.substr(0, accept_encoding.size()) == accept_encoding) {
+		req.accept_encoding_ = line.substr(accept_encoding.size());
     }
-    else if (line.substr(0, user_agent.size()) == user_agent) {
-      req.user_agent_ = line.substr(user_agent.size());
+	else if (line.substr(0, user_agent.size()) == user_agent) {
+		req.user_agent_ = line.substr(user_agent.size());
     }
   }
 
@@ -143,6 +150,10 @@ unsigned webserver::Request(void* ptr_s) {
   s.SendLine("Content-Length: " + str_str.str());
   s.SendLine("");
   s.SendLine(req.answer_);
+
+  std::cout << "Answer has been sent.\n";
+
+  Sleep(100);
 
   s.Close();
   

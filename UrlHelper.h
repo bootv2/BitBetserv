@@ -28,9 +28,12 @@
 
 #include <string>
 #include <map>
+#include <vector>
 
 void SplitUrl             (std::string const& url, std::string& protocol, std::string& server, std::string& path);
 bool RemoveProtocolFromUrl(std::string const& url, std::string& protocol, std::string& rest);
+
+void SplitPostReq			(std::string _post_req, std::string& path, std::map<std::string, std::string>& params, size_t posStartPath);
 
 void SplitGetReq          (std::string et_req,     std::string& path,     std::map<std::string, std::string>& params);
 

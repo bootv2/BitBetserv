@@ -1,5 +1,6 @@
 ﻿#include "webserver.h"
 #include "Socket.h"
+#include "definitions.h"
 #include <vector>
 #include "account.cpp"
 #include <iostream>
@@ -11,6 +12,9 @@
 #include "PresetPages.h"
 #include "BitBet.cpp"
 #include "FileIO.cpp"
+#include "LoadingClass.h"
+#include "HTMLVariables.h"
+
 
 std::vector<Account> authenticationStorage;
 
@@ -18,12 +22,18 @@ std::vector<Session> sessionStorage;
 
 std::vector<Page> pageStor;
 
-BitBet defaultBitBet;
+BitBet defaultBitBet(&authenticationStorage);
 
 std::vector<std::string> pagePaths;
 unsigned int seedsalt = 0;
 
 std::string tmpSesID;
+
+LoadingClass load(&authenticationStorage, &defaultBitBet);
+
+std::string currentSessionID;
+
+std::string MOTD;
 
 //Session defaultSession;
 
@@ -41,6 +51,9 @@ std::string getAnswer(std::string _body, std::string _title, std::string _bgcolo
 void Get(webserver::http_request* r) {
   Socket s = *(r->s_);
 
+  const int home(0), createAccount(1), createAccountParams(2), login(3), loginParams(4), bitbet(5), staticNewRound(6), newRoundParams(7),
+	  saveAll(8), give100Credits(9), roundMoneyMade(10), buyin(11);
+
   srand(time(NULL) + seedsalt);
   seedsalt++;
 
@@ -48,60 +61,79 @@ void Get(webserver::http_request* r) {
   std::string body;
   std::string bgcolor="#ffffff";
   std::string links;
+  currentSessionID = r->params_["session"];
 
-  std::cout << "request made to 127.0.0.1" << r->path_ << std::endl;
+  HTMLVariables HTMLvars;
+  HTMLVariables entryVars;
 
-  bool dynamicPage = false;
+  bool accountExisting = false;
+  bool correctAuthentication = false;
+
+  //Make switch for page switching functions
+  std::cout << "request made to server:" << r->path_ << std::endl;
 
   if (r->path_ == "/")
+	  r->path_ = "/0";
+
+  std::cout << "compensated for atoi reading: " << r->path_ << std::endl;
+
+  switch (atoi(r->path_.substr(1, r->path_.size()).c_str()))
   {
+  case home:
 	  body = pageStor.at(0).getBody();
 
 	  r->answer_ = getAnswer(body, title, bgcolor);
 
 	  r->params_.clear();
-	  return;
-  }
-
-  else if (r->path_ == "/saveAuth")
-  {
-	  FileIO authIO;
-	  authIO.initNoInput("authorisation.dbs");
-	  for (auto& Account : authenticationStorage)
-	  {
-		  authIO.writeString(Account.getUsername() + ":" + std::to_string(Account.getWallet()) + ":" + std::to_string(Account.getStatus()) + ":" + 
-			  std::to_string(Account.getID()) + ":" + Account.getPass() + "\n");
-
-	  }
-	  body = "Successfully saved all users to the authorisation file\n";
-	  std::cout << body;
-	  r->answer_ = getAnswer(body, title, bgcolor);
-	  r->params_.clear();
-	  return;
-  }
-
-  else if (r->path_ == "/login")
-  {
-	  body = pageStor.at(1).getBody();
-
-	  r->answer_ = getAnswer(body, title, bgcolor);
-
-	  r->params_.clear();
-	  return;
-  }
-
-  else if (r->path_ == "/createaccount")
-  {
+	  break;
+  case createAccount:
 	  body = pageStor.at(2).getBody();
 
 	  r->answer_ = getAnswer(body, title, bgcolor);
 
 	  r->params_.clear();
-	  return;
-  }
+	  break;
 
-  else if (r->path_ == "/bitbet")
-  {
+  case login:
+	  body = pageStor.at(1).getBody();
+
+	  r->answer_ = getAnswer(body, title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case loginParams:
+	  cout << "entered loginparams..\n" << r->params_["-Username"] << endl;
+	  for (auto& Account : authenticationStorage)
+	  {
+		  if (Account.auth(r->params_["-Username"], r->params_["-Password"]))
+		  {
+			  correctAuthentication = true;
+			  cout << "auth correct\n";
+			  sessionStorage.emplace_back(Session(seedsalt, Account.getID()));
+			  tmpSesID = sessionStorage.at(sessionStorage.size() - 1).getSessionID();
+			  break;
+		  }
+	  }
+
+	  if (!correctAuthentication)
+	  {
+		  body = pageStor.at(10).getBody();
+	  }
+	  else
+	  {
+		  HTMLvars.init(pageStor.at(15).getBody());
+		  HTMLvars.variables["sess"] = tmpSesID;
+		  body = HTMLvars.writeVars();
+		  HTMLvars.reset();
+	  }
+
+	  r->answer_ = body;
+
+	  r->params_.clear();
+	  break;
+
+  case bitbet:
 	  int curAccID;
 	  body = "";
 	  //account association.
@@ -123,9 +155,9 @@ void Get(webserver::http_request* r) {
 	  //TODO: what happens if user isnt logged in.
 	  if (body == "")
 	  {
-		  body = "<br><a href='/login'>You need to be logged in to play, click here to log in!</a> ";
+		  body = "<br><a href='/" + std::to_string(login) + "'>You need to be logged in to play, click here to log in!</a> ";
 		  r->answer_ = getAnswer(body, title, bgcolor);
-		  return;
+		  break;
 	  }
 
 	  //TODO: what happens if the user opens a game.
@@ -152,13 +184,89 @@ void Get(webserver::http_request* r) {
 	  }
 
 	  //listing available rounds.
-	  body += defaultBitBet.listRounds(tmpSesID);
+	  HTMLvars.init(pageStor.at(13).getBody());
+	  HTMLvars.variables["rent"] = "";
+	  for (auto& Account : authenticationStorage)
+	  {
+		  if (curAccID == Account.getID())
+		  {
+			  HTMLvars.variables["user"] = Account.getUsername();
+			  HTMLvars.variables["usr1"] = Account.getUsername();
+		  }
+	  } 
+	  for (auto& Round : defaultBitBet.getRounds())
+	  {
+		  entryVars.init(pageStor.at(14).getBody());
+		  entryVars.variables["rnam"] = Round.getName();
+		  entryVars.variables["ratt"] = Round.getRoundAttributes();
+		  HTMLvars.variables["rent"] += entryVars.writeVars();
+		  std::cout << entryVars.writeVars();
+		  entryVars.reset();
+	  }
+	  body = HTMLvars.writeVars();
+	  HTMLvars.reset();
 	  r->answer_ = getAnswer(body, title, bgcolor);
-	  return;
-  }
+	  r->params_.clear();
+	  break;
 
-  else if (r->path_ == "/give100creds")
-  {
+  case createAccountParams:
+	  for (auto& Account : authenticationStorage)
+	  {
+		  if (Account.getUsername() == r->params_["-Username"])
+		  {
+			  HTMLvars.init(pageStor.at(11).getBody());
+			  HTMLvars.variables["user"] = r->params_["-Username"];
+			  body = HTMLvars.writeVars();
+			  HTMLvars.reset();
+			  accountExisting = true;
+			  break;
+		  }
+	  }
+	  if (!accountExisting)
+	  {
+		  HTMLvars.init(pageStor.at(12).getBody());
+		  HTMLvars.variables["user"] = r->params_["-Username"];
+		  body = HTMLvars.writeVars();
+		  HTMLvars.reset();
+		  authenticationStorage.emplace_back(Account(r->params_["-Username"], r->params_["-Password"], authenticationStorage.size() + 1));
+	  }
+	  else
+	  {
+		  cout << "account exists\n";
+	  }
+	  r->answer_ = getAnswer(body, title, bgcolor);
+	  r->params_.clear();
+  break;
+
+  case staticNewRound:
+	  body = pageStor.at(3).getBody();
+
+	  r->answer_ = getAnswer(body, title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case newRoundParams:
+	  defaultBitBet.newRound(r->params_["roundName"], atof(r->params_["startingPrice"].c_str()), atof(r->params_["growth"].c_str()), 
+		  seedsalt, atoi(r->params_["runningTime"].c_str()));
+
+	  r->answer_ = getAnswer(body, title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case saveAll:
+	  load.saveBitBet();
+	  load.saveAuthorisations();
+	  body = "Successfully saved all users to the authorisation file\n";
+	  std::cout << body;
+
+	  r->answer_ = getAnswer(body, title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case give100Credits: // Create payment screen for adding credits.
 	  body = "";
 	  //account association.
 	  for (auto& Session : sessionStorage)
@@ -169,17 +277,21 @@ void Get(webserver::http_request* r) {
 			  {
 				  if (Session.getAccountID() == Account.getID())
 				  {
-					  body = "Successfully gotten account " + Account.getUsername() + " associated with the current session<br>";
+					  body = "Successfully gotten account " + Account.getUsername() + " associated with the current session<br>"
+						  "<a href='/5?gameid=" + r->params_["gameid"] + "&session=" + r->params_["session"] + "'>Click here to return to the previous round page.</a>";
 					  tmpSesID = Session.getSessionID();
 					  Account.giveMoney(100);
 				  }
 			  }
 		  }
 	  }
-  }
 
-  else if (r->path_ == "/roundmoneymade")
-  {
+	  r->answer_ = getAnswer(body, title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case roundMoneyMade:
 	  body = "";
 	  //account association.
 	  for (auto& Session : sessionStorage)
@@ -197,17 +309,20 @@ void Get(webserver::http_request* r) {
 					  {
 						  if (r->params_["gameid"] == Round.getRoundID())
 						  {
-							  body += "you have made " + std::to_string(Round.getPlace(Session.getAccountID()).money) + " total in " + Round.getName() + "<br>";
+							  body += "you have made " + std::to_string(Round.getPlace(Session.getAccountID()).getMoney()) + " total in " + Round.getName() + "<br>";
 						  }
 					  }
 				  }
 			  }
 		  }
 	  }
-  }
 
-  else if (r->path_ == "/buyin")
-  {
+	  r->answer_ = getAnswer(body, title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case buyin:
 	  body = "";
 	  //account association.
 	  for (auto& Session : sessionStorage)
@@ -228,12 +343,12 @@ void Get(webserver::http_request* r) {
 							  {
 								  std::cout << Account.getUsername() << " successfully baught into " << Round.getName() << std::endl;
 								  Round.buyIn(Account);
-								  body += "Successfully baught in! you can track the money you made in this game <a href = '/roundmoneymade?session=" + tmpSesID + "&gameid=" + r->params_["gameid"] + "'>here< / a> ";
+								  body += "Successfully baught in! you can track the money you made in this game <a href = '/" + std::to_string(roundMoneyMade) + "?session=" + tmpSesID + "&gameid=" + r->params_["gameid"] + "'>here< / a> ";
 							  }
 							  else
 							  {
 								  std::cout << "Wallet contains " << Account.getWallet() << " credits, buyIN costs " << Round.getBuyInPrice() << std::endl;
-								  body += "Insufficient funds! Click <br><a href = '/give100creds?session=" + tmpSesID + "&gameid=" + r->params_["gameid"] + "'>here< / a> to return to the round's page.<br>";
+								  body += "Insufficient funds! Click <br><a href = '/" + std::to_string(give100Credits) + "?session=" + tmpSesID + "&gameid=" + r->params_["gameid"] + "'>here< / a> to get 100 credits.<br>";
 							  }
 						  }
 					  }
@@ -244,92 +359,69 @@ void Get(webserver::http_request* r) {
 	  //TODO: what happens if user isnt logged in.
 	  if (body == "")
 	  {
-		  body = "<br><a href='/login'>You need to be logged in to play, click here to log in!</a> ";
+		  body = "<br><a href='/" + std::to_string(login) + "'>You need to be logged in to play, click here to log in!</a> ";
 		  r->answer_ = getAnswer(body, title, bgcolor);
 	  }
 
-  }
-
-	 else if (r->path_ == "/params.login")
-	  {
-		  bool correctAuthentication = false;
-			  for (auto& Account : authenticationStorage)
-			  {
-				  if (Account.auth(r->params_["Username"], r->params_["Password"]))
-				  {
-					  correctAuthentication = true;
-					  cout << "auth correct<br>";
-					  sessionStorage.emplace_back(Session(seedsalt, Account.getID()));
-					  tmpSesID = sessionStorage.at(sessionStorage.size() - 1).getSessionID();
-					  break;
-				  }
-			  }
-
-		  if (!correctAuthentication)
-		  {
-			  body = "<p><a href='/login'>Incorrect Authentication... Click here to retry.</a>";
-		  }
-		  else
-		  {
-			  body = "<h1>User " + r->params_["Username"] + " authenticated successfully!</h1><br>";
-			  body += "<br><a href='/bitbet?session=" + tmpSesID + "'>Click here to enter BitBet</a> <br>";
-		  }
-	  }
-
-	  else if ("/params.entergame.accountcreate")
-	  {
-		  bool accountExisting = false;
-		  //bool authenticated = false;
-		  for (auto& Account : authenticationStorage)
-		  {
-			  if (Account.getUsername() == r->params_["Username"])
-			  {
-				  body = "<h1> Account " + r->params_["Username"] + " already exists, please try another username. </h1>";
-				  body += "<form action='/entergame/accountcreate/param'>"
-					  "<table>"
-					  "<tr><td>Field 1</td><td><input name=Username></td></tr>"
-					  "<tr><td>Field 2</td><td><input name=Password></td></tr>"
-					  "</table>"
-					  "<input type=submit></form>";
-				  accountExisting = true;
-				  //authenticated = true;
-				  break;
-			  }
-		  }
-		  if (!accountExisting)
-		  {
-			  body = "<br><a href='/login'>Click here to return to the login screen</a> ";
-			  authenticationStorage.emplace_back(Account(r->params_["Username"], r->params_["Password"], authenticationStorage.size() + 1));
-		  }
-		  else
-		  {
-			  cout << "account exists";
-		  }
-	  }
-	  else {
-		  r->status_ = "404 Not Found";
-		  title = "Wrong URL";
-		  body = "<h11>Wrong URL</h11>";
-		  body += "Path is : &gt;" + r->path_ + "&lt;";
-	  }
-
-	  r->answer_ = "<html><head><title>";
-	  r->answer_ += title;
-	  r->answer_ += "</title></head><body bgcolor='" + bgcolor + "'>";
-	  r->answer_ += body;
-	  r->answer_ += "</body></html>";
+	  r->answer_ = getAnswer(body, title, bgcolor);
 
 	  r->params_.clear();
+	  break;
+
+  case 401:
+	  r->answer_ = getAnswer(pageStor.at(4).getBody(), title, bgcolor);
+
+	  r->params_.clear();
+	  break;
+
+  case 1000: //CSS page series(1000-1999)
+	  r->answer_ = pageStor.at(5).getBody();//get CSS foundation sheet
+
+	  r->params_.clear();
+	  break;
+
+  case 2000: //JS page series(2000-2999)
+	  r->answer_ = pageStor.at(6).getBody();//get JS mordernizr
+
+	  r->params_.clear();
+	  break;
+
+  case 2001:
+	  r->answer_ = pageStor.at(7).getBody();//get JS/vendor/jquery
+
+	  r->params_.clear();
+	  break;
+
+  case 2002:
+	  r->answer_ = pageStor.at(8).getBody();//get JS foundation.min
+
+	  r->params_.clear();
+	  break;
+
+  case 2003:
+	  r->answer_ = pageStor.at(9).getBody();//get JS foundation
+
+	  r->params_.clear();
+	  break;
+
+
+  default:
+	  //404 page
+	  body = "404, page not found!";
+	  title = body;
+	  r->answer_ = getAnswer(body, title, bgcolor);
+	  r->params_.clear();
+	  break;
+  }
+
+  
   
 }
 
 int main() {
-	setPresets(&pageStor);
-	Account admin("bootv2", "1234", 0);
-	admin.giveMoney(10000);
-	admin.setStatus(3);
-	authenticationStorage.emplace_back(admin);
+	load.loadAuthorisations();
+	setPresets(&pageStor, &currentSessionID);
 	std::cout << "attempting to start the server on port 8081" << std::endl;
-	webserver(8081, Get);
+	webserver(80, Get);
 
 }

@@ -36,25 +36,34 @@
     <ClCompile Include="webserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Account.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Session.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="md5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Page.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BitBet.cpp">
+    <ClCompile Include="LoadingClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Round.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="BitBet.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.cpp">
+      <Filter>Source Files\Game</Filter>
     </ClCompile>
     <ClCompile Include="Place.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Round.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FileIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTMLVariables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,5 +110,20 @@
     <ClInclude Include="Place.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LoadingClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="definitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTMLVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
