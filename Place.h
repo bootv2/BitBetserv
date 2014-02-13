@@ -1,6 +1,10 @@
 #pragma once
 class Place
 {
+private:
+	int *playerID;
+	double *money;
+	int *placenum;
 public:
 	Place()
 	{
@@ -19,8 +23,8 @@ public:
 	}
 	double getMoney()
 	{
-		//return *money;
-		return 0.05;
+		return *money;
+		//return 0.05;
 	}
 
 	void giveMoney(double _give)
@@ -30,6 +34,7 @@ public:
 
 	int getPlayerID()
 	{
+		std::cout << "PlayerID for round saving: " << std::to_string(*playerID) << std::endl;
 		return *playerID;
 	}
 
@@ -37,9 +42,5 @@ public:
 	{
 		return *placenum;
 	}
-
-	int *playerID;
-	double *money;
-	int *placenum;
 };
 

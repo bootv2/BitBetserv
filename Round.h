@@ -6,7 +6,7 @@ private:
 	double *buyInPrice;
 	double *growth;
 
-	unsigned int placesUsed = 0;
+	unsigned int* placesUsed = 0;
 
 	bool running = true;
 
@@ -36,6 +36,7 @@ public:
 		buyInPrice = new double(startPrice);
 		growth = new double(_growth);
 		genRoundID(sSalt);
+		placesUsed = new unsigned int(0);
 	}
 
 	void setMaxRunningTime(int _days)
@@ -129,7 +130,7 @@ public:
 	std::string getRoundAttributes()
 	{
 		std::string ret;
-		ret = "Currently, it will cost " + std::to_string(*buyInPrice) + " credits to enter the game. Playing now will put you on the " + std::to_string(placesUsed) + "th position."
+		ret = "Currently, it will cost " + std::to_string(*buyInPrice) + " credits to enter the game. Playing now will put you on the " + std::to_string(*placesUsed) + "th position."
 			"The round price grows with " + std::to_string(*growth) + " credits for every entry.";
 		return ret;
 	}
@@ -155,7 +156,7 @@ public:
 		_a.takeMoney(*buyInPrice);
 		*buyInPrice += *growth;
 		cout << to_string(*buyInPrice) << "  :  " << to_string(*growth) << endl;
-		placeMap.emplace_back(Place(_a.getID(), 0, placesUsed + 1)); placesUsed++;
+		placeMap.emplace_back(Place(_a.getID(), 0, *placesUsed + 1)); *placesUsed++;
 		payPlayers();
 	}
 };

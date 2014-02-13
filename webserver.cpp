@@ -53,6 +53,8 @@ unsigned webserver::Request(void* ptr_s) {
 
   http_request req;
 
+  req.content_type_ = "text/html";
+
   std::string path;
   std::map<std::string, std::string> params;
 
@@ -146,7 +148,7 @@ unsigned webserver::Request(void* ptr_s) {
   s.SendLine(std::string("Date: ") + asctime_remove_nl + " GMT");
   s.SendLine(std::string("Server: ") +serverName);
   s.SendLine("Connection: close");
-  s.SendLine("Content-Type: text/html; charset=ISO-8859-1");
+  s.SendLine("Content-Type: " + req.content_type_ +"; charset=ISO-8859-1");
   s.SendLine("Content-Length: " + str_str.str());
   s.SendLine("");
   s.SendLine(req.answer_);

@@ -14,6 +14,8 @@
 #include "FileIO.cpp"
 #include "LoadingClass.h"
 #include "HTMLVariables.h"
+#include "AdminPanel.h"
+
 
 
 std::vector<Account> authenticationStorage;
@@ -52,12 +54,13 @@ void Get(webserver::http_request* r) {
   Socket s = *(r->s_);
 
   const int home(0), createAccount(1), createAccountParams(2), login(3), loginParams(4), bitbet(5), staticNewRound(6), newRoundParams(7),
-	  saveAll(8), give100Credits(9), roundMoneyMade(10), buyin(11);
+	  saveAll(8), give100Credits(9), roundMoneyMade(10), buyin(11), adminPanel(12), userPanel(13);
 
   srand(time(NULL) + seedsalt);
   seedsalt++;
 
   std::string title;
+  std::string curAcc;
   std::string body;
   std::string bgcolor="#ffffff";
   std::string links;
@@ -66,14 +69,21 @@ void Get(webserver::http_request* r) {
   HTMLVariables HTMLvars;
   HTMLVariables entryVars;
 
+  AdminPanel adminPan;
+  adminPan.init(&authenticationStorage, pageStor.at(20).getBody());
+
   bool accountExisting = false;
   bool correctAuthentication = false;
+  bool admin = false;
+  bool banned = false;
 
   //Make switch for page switching functions
   std::cout << "request made to server:" << r->path_ << std::endl;
 
   if (r->path_ == "/")
 	  r->path_ = "/0";
+  else if (r->path_ == "")
+	  return;
 
   std::cout << "compensated for atoi reading: " << r->path_ << std::endl;
 
@@ -110,6 +120,11 @@ void Get(webserver::http_request* r) {
 		  {
 			  correctAuthentication = true;
 			  cout << "auth correct\n";
+			  if (Account.isBanned())
+			  {
+				  correctAuthentication = false;
+				  banned = true;
+			  }
 			  sessionStorage.emplace_back(Session(seedsalt, Account.getID()));
 			  tmpSesID = sessionStorage.at(sessionStorage.size() - 1).getSessionID();
 			  break;
@@ -118,12 +133,21 @@ void Get(webserver::http_request* r) {
 
 	  if (!correctAuthentication)
 	  {
-		  body = pageStor.at(10).getBody();
+		  if (!banned)
+			  body = pageStor.at(10).getBody();
+		  else
+		  {
+			  banned = false;
+			  body = "You are banned!";
+		  }
 	  }
 	  else
 	  {
 		  HTMLvars.init(pageStor.at(15).getBody());
 		  HTMLvars.variables["sess"] = tmpSesID;
+		  MOTD = "Hello " + r->params_["-Username"] + ", it's good to see you again.<br><br>"
+			  "Please play it safe, gamble, but dont spend any money you can't miss!";
+		  HTMLvars.variables["motd"] = MOTD;
 		  body = HTMLvars.writeVars();
 		  HTMLvars.reset();
 	  }
@@ -192,6 +216,9 @@ void Get(webserver::http_request* r) {
 		  {
 			  HTMLvars.variables["user"] = Account.getUsername();
 			  HTMLvars.variables["usr1"] = Account.getUsername();
+			  HTMLvars.variables["sess"] = r->params_["session"];
+			  if (Account.getStatus() > 0)
+				  admin = true;
 		  }
 	  } 
 	  for (auto& Round : defaultBitBet.getRounds())
@@ -199,10 +226,20 @@ void Get(webserver::http_request* r) {
 		  entryVars.init(pageStor.at(14).getBody());
 		  entryVars.variables["rnam"] = Round.getName();
 		  entryVars.variables["ratt"] = Round.getRoundAttributes();
+		  entryVars.variables["sess"] = r->params_["session"];
+		  entryVars.variables["roid"] = Round.getRoundID();
 		  HTMLvars.variables["rent"] += entryVars.writeVars();
-		  std::cout << entryVars.writeVars();
 		  entryVars.reset();
 	  }
+	  if (admin)
+	  {
+		  admin = false;
+		  HTMLvars.variables["atad"] = "<section class='section'>"
+			  "<h5 class='title'><a href='/12?session=" + r->params_["session"] + "&page=0'>Admin Panel</a></h5>"
+			  "</section>";
+	  }
+	  else
+		  HTMLvars.variables["atad"] = "You need to be an administrator to access this panel!";
 	  body = HTMLvars.writeVars();
 	  HTMLvars.reset();
 	  r->answer_ = getAnswer(body, title, bgcolor);
@@ -228,7 +265,7 @@ void Get(webserver::http_request* r) {
 		  HTMLvars.variables["user"] = r->params_["-Username"];
 		  body = HTMLvars.writeVars();
 		  HTMLvars.reset();
-		  authenticationStorage.emplace_back(Account(r->params_["-Username"], r->params_["-Password"], authenticationStorage.size() + 1));
+		  authenticationStorage.emplace_back(Account(r->params_["-Username"], r->params_["-Password"], authenticationStorage.size() + 1, false));
 	  }
 	  else
 	  {
@@ -368,14 +405,192 @@ void Get(webserver::http_request* r) {
 	  r->params_.clear();
 	  break;
 
+  case userPanel:
+	  HTMLvars.init(pageStor.at(22).getBody());
+	  HTMLvars.variables["ses0"] = r->params_["session"];
+	  HTMLvars.variables["ses1"] = r->params_["session"];
+	  HTMLvars.variables["ses2"] = r->params_["session"];
+	  HTMLvars.variables["ses3"] = r->params_["session"];
+	  HTMLvars.variables["ses4"] = r->params_["session"];
+	  HTMLvars.variables["ses5"] = r->params_["session"];
+
+	  if (r->params_["page"] == "0")
+	  {
+		  HTMLvars.variables["aloc"] = "Home";
+		  HTMLvars.variables["adat"] = "Welcome to the user account panel!";
+	  }
+
+	  else if (r->params_["page"] == "1")
+	  {
+		  entryVars.init(pageStor.at(23).getBody());
+		  entryVars.variables["sess"] = r->params_["session"];
+		  HTMLvars.variables["aloc"] = "Security";
+		  HTMLvars.variables["adat"] = entryVars.writeVars();
+		  entryVars.reset();
+
+	  }
+
+	  else if (r->params_["page"] == "11")
+	  {
+		  HTMLvars.variables["aloc"] = "Security";
+		  
+		  for (auto& Session : sessionStorage)
+		  {
+			  if (Session.getSessionID() == r->params_["session"])
+			  {
+				  for (auto& Account : authenticationStorage)
+				  {
+					  if (Session.getAccountID() == Account.getID())
+					  {
+						  if (r->params_["oldPass"] == Account.getPass())
+						  {
+							  Account.setPass(r->params_["newPass"]);
+							  HTMLvars.variables["adat"] = "Password has successfully been changed!";
+						  }
+						  else
+							  HTMLvars.variables["adat"] = "The password you entered is invalid.";
+					  }
+				  }
+			  }
+		  }
+	  }
+
+	  r->answer_ = HTMLvars.writeVars();
+	  HTMLvars.reset();
+	  r->params_.clear();
+	  break;
+
+  case adminPanel:
+	  for (auto& Session : sessionStorage)
+	  {
+		  if (Session.getSessionID() == r->params_["session"])
+		  {
+			  for (auto& Account : authenticationStorage)
+			  {
+				  if (Session.getAccountID() == Account.getID())
+				  {
+					  curAcc = Account.getUsername();
+					  if (Account.getStatus() == 1)//admin status
+						  admin = true;
+					  else
+						  admin = false;
+				  }
+			  }
+		  }
+	  }
+	  if (admin)
+	  {
+		  admin = false;
+		  HTMLvars.init(pageStor.at(16).getBody());
+
+		  switch (atoi(r->params_["page"].c_str()))
+		  {
+		  case 0:
+			  HTMLvars.variables["aloc"] = "Home";
+			  HTMLvars.variables["adat"] = "<p>Welcome to the BitBet admin panel home page!</p>";
+			  break;
+
+		  case 1:
+			  if (r->params_["ban"] != "NOBAN")
+			  {
+				  for (auto& Account : authenticationStorage)
+				  {
+					  if (r->params_["ban"] == Account.getUsername())
+					  {
+						  if (Account.isBanned())
+							  Account.ban();
+						  else
+							  Account.unban();
+						  break;
+					  }
+				  }
+			  }
+			  HTMLvars.variables["aloc"] = "Account Management";
+			  HTMLvars.variables["adat"] = "<p>Welcome to the account management page</p>"
+				  "<p>" + adminPan.listAccounts(r->params_["session"]) + "</p>";
+			  break;
+
+		  case 2:
+			  if (r->params_["newround"] == "true")
+			  {
+				  entryVars.init(pageStor.at(21).getBody());
+				  entryVars.variables["sess"] = r->params_["session"];
+				  HTMLvars.variables["aloc"] = "Create new round";
+				  HTMLvars.variables["adat"] = entryVars.writeVars();
+				  entryVars.reset();
+			  }
+			  else if (r->params_["cnewround"] == "true")
+			  {
+				  defaultBitBet.newRound(r->params_["roundName"], atof(r->params_["startingPrice"].c_str()), atof(r->params_["growth"].c_str()),
+					  seedsalt, atoi(r->params_["runningTime"].c_str()));
+				  HTMLvars.variables["aloc"] = "Round Created!";
+				  HTMLvars.variables["adat"] = "The round " + r->params_["roundName"] + " has been successfully created!";
+			  }
+			  else
+			  {
+				  HTMLvars.variables["aloc"] = "Round Management";
+				  for (auto& Round : defaultBitBet.getRounds())
+				  {
+					  entryVars.init(pageStor.at(14).getBody());
+					  entryVars.variables["rnam"] = Round.getName();
+					  entryVars.variables["ratt"] = Round.getRoundAttributes();
+					  entryVars.variables["sess"] = r->params_["session"];
+					  entryVars.variables["roid"] = Round.getRoundID();
+					  HTMLvars.variables["adat"] += entryVars.writeVars();
+					  entryVars.reset();
+				  }
+				  HTMLvars.variables["adat"] += "<p>Click <a href='/12?newround=true&session=" + r->params_["session"] + "&page=2'>here</a> to create a new round!";
+			  }
+			  break;
+
+		  default:
+			  break;
+		  }
+
+		  HTMLvars.variables["sess"] = r->params_["session"];
+		  HTMLvars.variables["user"] = curAcc;
+		  HTMLvars.variables["usr1"] = curAcc;
+		  HTMLvars.variables["ses0"] = r->params_["session"];
+		  HTMLvars.variables["ses1"] = r->params_["session"];
+		  HTMLvars.variables["ses2"] = r->params_["session"];
+		  HTMLvars.variables["ses3"] = r->params_["session"];
+		  r->answer_ = HTMLvars.writeVars();
+		  HTMLvars.reset();
+	  }
+	  else
+	  {
+		  r->answer_ = pageStor.at(1).getBody();
+	  }
+
+	  curAcc = "";
+	  
+
+	  r->params_.clear();
+	  break;
+
+
+  case 400:
+	  r->answer_ = pageStor.at(18).getBody();
+
+	  r->params_.clear();
+	  break;
+
   case 401:
-	  r->answer_ = getAnswer(pageStor.at(4).getBody(), title, bgcolor);
+	  r->answer_ = pageStor.at(19).getBody();
 
 	  r->params_.clear();
 	  break;
 
   case 1000: //CSS page series(1000-1999)
+	  r->content_type_ = "text/css";
 	  r->answer_ = pageStor.at(5).getBody();//get CSS foundation sheet
+
+	  r->params_.clear();
+	  break;
+
+  case 1001:
+	  r->content_type_ = "text/css";
+	  r->answer_ = pageStor.at(17).getBody();//get CSS foundation admin sheet
 
 	  r->params_.clear();
 	  break;
@@ -407,7 +622,7 @@ void Get(webserver::http_request* r) {
 
   default:
 	  //404 page
-	  body = "404, page not found!";
+	  body = "404, page not found! click <a href='/0'>here</a> to return to the home page.";
 	  title = body;
 	  r->answer_ = getAnswer(body, title, bgcolor);
 	  r->params_.clear();
@@ -421,7 +636,7 @@ void Get(webserver::http_request* r) {
 int main() {
 	load.loadAuthorisations();
 	setPresets(&pageStor, &currentSessionID);
-	std::cout << "attempting to start the server on port 8081" << std::endl;
+	std::cout << "attempting to start the server on port 80" << std::endl;
 	webserver(80, Get);
 
 }

@@ -20,10 +20,7 @@ void setPresets(std::vector<Page>* _pMap, std::string* sessionID)
 
 	_pMap->emplace_back(Page(loadedPages.at(u)));//0: index
 	u++;
-	/*_pMap->emplace_back(Page("<h1>Welcome to BitBet server Alpha 0.2</h1>"
-		"<a href='/3'> Click here to log in!</a><br/>"
-		"<a href='/8'> Click here to save all</a><br/>"
-		"<a href='/1'> Click here create a new account!</a><br/>"));*/
+
 
 	htmlIO.initHTML("Foundation/", "login.html");
 	loadedPages.emplace_back("");
@@ -206,6 +203,101 @@ void setPresets(std::vector<Page>* _pMap, std::string* sessionID)
 	u++;
 
 
+	htmlIO.initHTML("Foundation/", "adminpanel.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//16: universal admin panel page
+	u++;
+
+	htmlIO.initHTML("Foundation/css/", "foundation_admin.css");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//17: admin panel foundation css
+	u++;
+
+	htmlIO.initHTML("Foundation/", "admext.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//18: admin panel ext css
+	u++;
+
+	htmlIO.initHTML("Foundation/", "admint.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//19: admin panel int css
+	u++;
+
+	htmlIO.initHTML("Foundation/", "adminaccman.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//20: admin panel: account section
+	u++;
+
+	htmlIO.initHTML("Foundation/", "newround.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//21: admin panel: Round creation
+	u++;
+
+	htmlIO.initHTML("Foundation/", "accountpanel.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//22: Account panel: Home
+	u++;
+
+	htmlIO.initHTML("Foundation/", "changepass.htm");
+	loadedPages.emplace_back("");
+	for (int i = 0; i < htmlIO.amountOfLines(); i++)
+	{
+		loadedPages.at(u) += htmlIO.readLine(i);
+	}
+
+	htmlIO.closeFile();
+
+	_pMap->emplace_back(Page(loadedPages.at(u)));//23: Account panel: Security
+	u++;
 
 
 }

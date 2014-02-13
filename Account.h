@@ -5,11 +5,13 @@ private:
 	string username;
 	string password;
 	int* id;
+	bool* banned;
 	double* wallet = 0;
 	short* status = 0;//0 for standard user, 1 for standard moderator, 2 for extended moderator, 3 for full admin
 public:
-	Account(string usr, string passw, int ID)
+	Account(string usr, string passw, int ID, bool _banned)
 	{
+		banned = new bool(_banned);
 		username = usr;
 		password = passw;
 		id = new int(ID);
@@ -17,8 +19,14 @@ public:
 		status = new short(0);
 	}
 
-	void init(string usr, string passw, int ID)
+	void setPass(std::string newPass)
 	{
+		password = newPass;
+	}
+
+	void init(string usr, string passw, int ID, bool _banned)
+	{
+		banned = new bool(_banned);
 		username = usr;
 		password = passw;
 		id = new int(ID);
@@ -29,6 +37,21 @@ public:
 	string getPass()
 	{
 		return password;
+	}
+
+	void ban()
+	{
+		*banned = true;
+	}
+
+	void unban()
+	{
+		*banned = false;
+	}
+
+	bool isBanned()
+	{
+		return *banned;
 	}
 
 	void setStatus(short _st)

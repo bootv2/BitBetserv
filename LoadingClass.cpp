@@ -1,6 +1,9 @@
 #include "Account.cpp"
 #include <vector>
 #include <iostream>
+#include <iomanip>
+#include <algorithm>
+#include <cctype>
 #include "FileIO.cpp"
 #include <sstream>
 #include "BitBet.cpp"
@@ -12,6 +15,14 @@ LoadingClass::LoadingClass(std::vector<Account>* _pAccStor, BitBet* _bb)
 {
 	bb = _bb;
 	pAuthStorage = _pAccStor;
+}
+
+bool to_bool(std::string str) {
+	std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+	std::istringstream is(str);
+	bool b;
+	is >> std::boolalpha >> b;
+	return b;
 }
 
 void LoadingClass::loadAuthorisations()
@@ -29,9 +40,10 @@ void LoadingClass::loadAuthorisations()
 	{
 		if (lines.at(i) == "") continue;
 		lineTokens = split(lines.at(i), ':');
-		tmp = new Account(lineTokens.at(0), lineTokens.at(4), atoi(lineTokens.at(3).c_str()));
+		tmp = new Account(lineTokens.at(0), lineTokens.at(4), atoi(lineTokens.at(3).c_str()), to_bool(lineTokens.at(5)));
+		std::cout << "Banned: " << lineTokens.at(5) << std::endl;
 		tmp->giveMoney(atof(lineTokens.at(1).c_str()));
-		tmp->setStatus(atoi(lineTokens.at(1).c_str()));
+		tmp->setStatus(atoi(lineTokens.at(2).c_str()));
 		std::cout << lineTokens.at(0) << " Loaded! password read as: " << lineTokens.at(4) << std::endl;
 		pAuthStorage->emplace_back(*tmp);
 		delete tmp;
@@ -44,10 +56,13 @@ void LoadingClass::loadAuthorisations()
 void LoadingClass::saveAuthorisations()
 {
 	loadingIO.init(authFileName);
+	std::string tmp;
 	for (auto& Account : *pAuthStorage)
 	{
+		if (Account.isBanned()) tmp = "true";
+		else tmp = "false";
 		loadingIO.writeString("&" + Account.getUsername() + ":" + std::to_string(Account.getWallet()) + ":" + std::to_string(Account.getStatus()) + ":" +
-			std::to_string(Account.getID()) + ":" + Account.getPass());
+			std::to_string(Account.getID()) + ":" + Account.getPass() + ":" + tmp);
 
 	}
 	loadingIO.closeFile();
