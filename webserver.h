@@ -39,6 +39,7 @@ class webserver {
       Socket*                            s_;
       std::string                        method_;
       std::string                        path_;
+	  std::string						 content_type_;
       std::map<std::string, std::string> params_;
 
       std::string                        accept_;

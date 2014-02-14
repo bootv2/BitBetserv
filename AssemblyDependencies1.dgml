@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @7 @30 Member=(Name=ReceiveLine @14))" Category="CodeSchema_Method" Bounds="-731.709781442461,-709.661111826219,97.6666666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="ReceiveLine" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=(Name=SendBytes OverloadingParameters=[(Type=&quot;const std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &amp;&quot;)]))" Category="CodeSchema_Method" Bounds="-516.633126982825,-762.3010654395,91.3633333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="SendBytes" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=(Name=SendLine OverloadingParameters=[(Type=&quot;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;&quot;)]))" Category="CodeSchema_Method" Bounds="-630.419805856523,-762.3010654395,83.7866666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="SendLine" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=Close)" Category="CodeSchema_Method" Bounds="-554.086442209062,-814.941080087937,64.0466666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Close" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=End)" Category="CodeSchema_Method" Bounds="-731.709796090898,-814.941080087937,55.6366666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="End" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=ReceiveBytes)" Category="CodeSchema_Method" Bounds="-731.709784697669,-657.021097177781,105.243333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="ReceiveBytes" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=ReceiveLine)" Category="CodeSchema_Method" Bounds="-604.043109689531,-709.661111826219,97.6666666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="ReceiveLine" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=Socket)" Category="CodeSchema_Method" Bounds="-731.709802601315,-762.3010654395,71.29,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Socket" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 @30 Member=Start)" Category="CodeSchema_Method" Bounds="-646.073120065508,-814.941080087937,61.9866666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Start" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=&quot;Unknown Methods&quot;)" Category="CodeSchema_Method" Bounds="471.947098629323,-171.542471928322,131.836666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Unknown Methods" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=CountryEnumProc OverloadingParameters=[@21]))" Category="CodeSchema_Method" Bounds="-170.281441079461,-170.711313294001,129.716666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="CountryEnumProc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=DebuggerProbe @20))" Category="CodeSchema_Method" Bounds="655.717243212799,-329.462771928322,116.56,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="DebuggerProbe" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=DebuggerRuntime OverloadingParameters=[@19,@13,@22,@12]))" Category="CodeSchema_Method" Bounds="149.900231962656,-171.542471928322,130.516666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="DebuggerRuntime" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=FindHandlerForForeignException OverloadingParameters=[(Type=&quot;EHExceptionRecord *&quot;),(Type=&quot;EHRegistrationNode *&quot;),(Type=&quot;_CONTEXT *&quot;),@22,(Type=&quot;const _s_FuncInfo *&quot;),@13,@13,(Type=&quot;EHRegistrationNode *&quot;)]))" Category="CodeSchema_Method" Bounds="124.249875796049,-755.302849121094,204.733333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="FindHandlerForForeignException" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=GetLcidFromCountry @15))" Category="CodeSchema_Method" Bounds="704.800595228195,-118.902371928322,143.166666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="GetLcidFromCountry" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=GetLcidFromDefault @15))" Category="CodeSchema_Method" Bounds="193.053628561528,-118.902371928322,139.386666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="GetLcidFromDefault" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=GetLcidFromLangCountry @15))" Category="CodeSchema_Method" Bounds="-450.126729251537,152.580063279069,168.263333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="GetLcidFromLangCountry" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=GetLcidFromLanguage @15))" Category="CodeSchema_Method" Bounds="-646.463501292158,-5.34023672093139,152.343333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="GetLcidFromLanguage" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=LangCountryEnumProc OverloadingParameters=[@21]))" Category="CodeSchema_Method" Bounds="270.006998707842,-13.6221719283222,154.813333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="LangCountryEnumProc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=LanguageEnumProc OverloadingParameters=[@21]))" Category="CodeSchema_Method" Bounds="-144.904717039747,-118.071213294001,138.893333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="LanguageEnumProc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=ProcessCodePage OverloadingParameters=[@21,(Type=&quot;setloc_struct *&quot;)]))" Category="CodeSchema_Method" Bounds="284.617002927215,-224.182571928322,126.923333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="ProcessCodePage" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=TestDefaultLanguage OverloadingParameters=[@19,@13,(Type=&quot;setloc_downlevel_struct *&quot;)]))" Category="CodeSchema_Method" Bounds="51.4187130343085,-65.4311132940009,146.366666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="TestDefaultLanguage" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Atexit OverloadingParameters=[(Type=&quot;void (*)()&quot;)]))" Category="CodeSchema_Method" Bounds="232.262539299597,-645.303371928322,73.12,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Atexit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_CrtIsValidHeapPointer OverloadingParameters=[(Type=&quot;const void *&quot;)]))" Category="CodeSchema_Method" Bounds="-273.399972994225,91.6571590491391,157.236666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_CrtIsValidHeapPointer" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_CrtSetReportFile OverloadingParameters=[@13,@22]))" Category="CodeSchema_Method" Bounds="-488.106834704011,-163.260536720931,128.446666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_CrtSetReportFile" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_CxxThrowException OverloadingParameters=[@22,(Type=&quot;const _s__ThrowInfo *&quot;)]))" Category="CodeSchema_Method" Bounds="-300.036685377658,-57.9803367209314,145.103333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_CxxThrowException" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Getwctype OverloadingParameters=[@24,(Type=&quot;const _Ctypevec *&quot;)]))" Category="CodeSchema_Method" Bounds="723.797352841531,-540.023171928322,97.8266666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Getwctype" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Getwctypes OverloadingParameters=[@12,@12,(Type=&quot;short *&quot;),(Type=&quot;const _Ctypevec *&quot;)]))" Category="CodeSchema_Method" Bounds="658.090630603776,-487.383071928322,103.246666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Getwctypes" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Mbrtowc OverloadingParameters=[@21,@25,@16,@28,(Type=&quot;const _Cvtvec *&quot;)]))" Category="CodeSchema_Method" Bounds="415.742739299597,-592.663271928322,86.6333333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Mbrtowc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Mtxdst OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;)]))" Category="CodeSchema_Method" Bounds="651.732939299597,-645.303371928322,77.6233333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Mtxdst" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Mtxlock OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;)]))" Category="CodeSchema_Method" Bounds="-423.289855362377,-584.381336720931,82.3666666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Mtxlock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Mtxunlock OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;)]))" Category="CodeSchema_Method" Bounds="216.743619508197,-540.023171928322,95.5266666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Mtxunlock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_NMSG_WRITE @14))" Category="CodeSchema_Method" Bounds="509.897143212799,-329.462771928322,115.82,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_NMSG_WRITE" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_RTC_AllocaFailure OverloadingParameters=[@22,(Type=&quot;_RTC_ALLOCA_NODE *&quot;),@13]))" Category="CodeSchema_Method" Bounds="-646.463538105139,-110.620436720931,136.07,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_RTC_AllocaFailure" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_RTC_GetSrcLine OverloadingParameters=[(Type=&quot;unsigned char *&quot;),(Type=&quot;wchar_t *&quot;),@19,@28,(Type=&quot;wchar_t *&quot;),@19]))" Category="CodeSchema_Method" Bounds="127.743569593881,-224.182571928322,126.873333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_RTC_GetSrcLine" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Strftime_l OverloadingParameters=[@11,@16,@25,(Type=&quot;const tm *&quot;),@22,@27]))" Category="CodeSchema_Method" Bounds="-32.6365804918026,-540.023046291238,94.6433333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Strftime_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_UnwindNestedFrames OverloadingParameters=[(Type=&quot;EHRegistrationNode *&quot;),(Type=&quot;EHExceptionRecord *&quot;)]))" Category="CodeSchema_Method" Bounds="-646.463197138907,47.2998632790686,155.793333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_UnwindNestedFrames" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_VCrtDbgReportA OverloadingParameters=[@13,@22,@25,@13,@25,@25,@11]))" Category="CodeSchema_Method" Bounds="-646.463601370677,-163.260536720931,128.356666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_VCrtDbgReportA" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_VCrtDbgReportW OverloadingParameters=[@13,@22,@12,@13,@12,@12,@11]))" Category="CodeSchema_Method" Bounds="310.416998629323,-171.542471928322,131.53,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_VCrtDbgReportW" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_Wcrtomb OverloadingParameters=[@11,@24,@28,(Type=&quot;const _Cvtvec *&quot;)]))" Category="CodeSchema_Method" Bounds="769.58587263293,-592.663271928322,89.76,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_Wcrtomb" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__copy_path_to_wide_string OverloadingParameters=[@25,(Type=&quot;unsigned short * *&quot;)]))" Category="CodeSchema_Method" Bounds="194.880281180825,196.937253352525,187.766666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__copy_path_to_wide_string" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__copy_to_char OverloadingParameters=[@12,(Type=&quot;char * *&quot;)]))" Category="CodeSchema_Method" Bounds="-199.934759459181,-275.991513294001,119.913333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__copy_to_char" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__createFile OverloadingParameters=[@12,@19,@19,@29,@19,@19,@19]))" Category="CodeSchema_Method" Bounds="-388.456836062891,-479.101136720931,99.7,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__createFile" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtCompareStringA_stat OverloadingParameters=[@27,@12,@19,@25,@13,@25,@13,@13]))" Category="CodeSchema_Method" Bounds="548.15043741513,144.297153352525,175.373333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtCompareStringA_stat" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtCompareStringEx OverloadingParameters=[@12,@19,@12,@13,@12,@13]))" Category="CodeSchema_Method" Bounds="85.4920974845852,-12.791013294001,154.52,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtCompareStringEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtCorExitProcess @14))" Category="CodeSchema_Method" Bounds="362.440395228195,-118.902371928322,140.35,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtCorExitProcess" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtCreateEventExW OverloadingParameters=[@29,@12,@19,@19]))" Category="CodeSchema_Method" Bounds="582.227147955675,-66.2622719283222,150.233333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtCreateEventExW" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtCreateSemaphoreExW OverloadingParameters=[@29,@26,@26,@12,@19,@19]))" Category="CodeSchema_Method" Bounds="-228.523252152509,196.937227564154,180.306666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtCreateSemaphoreExW" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtCreateSymbolicLinkW OverloadingParameters=[@12,@12,@19]))" Category="CodeSchema_Method" Bounds="753.523870748463,144.297153352525,176.576666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtCreateSymbolicLinkW" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtEnumSystemLocalesEx OverloadingParameters=[(Type=&quot;int (*)(unsigned short *, unsigned long, long)&quot;),@19,@26]))" Category="CodeSchema_Method" Bounds="-18.2164854858421,196.937227564154,183.096666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtEnumSystemLocalesEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtExitProcess @14))" Category="CodeSchema_Method" Bounds="556.473874120655,-276.822671928322,122.336666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtExitProcess" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtFlsAlloc OverloadingParameters=[(Type=&quot;void (*)(void *)&quot;)]))" Category="CodeSchema_Method" Bounds="393.593763937109,-487.383071928322,101.98,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtFlsAlloc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtFlsFree @20))" Category="CodeSchema_Method" Bounds="-128.781438943231,-486.551913294001,100.236666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtFlsFree" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtFlsGetValue @20))" Category="CodeSchema_Method" Bounds="-337.913397072785,-215.900636720931,124.773333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtFlsGetValue" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtFlsSetValue OverloadingParameters=[@19,@22]))" Category="CodeSchema_Method" Bounds="-646.463597072785,-215.900636720931,123.82,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtFlsSetValue" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetDateFormatEx OverloadingParameters=[@12,@19,(Type=&quot;const _SYSTEMTIME *&quot;),@12,@21,@13]))" Category="CodeSchema_Method" Bounds="-460.669763805573,47.2998632790686,156.006666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetDateFormatEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetFileInformationByHandleEx OverloadingParameters=[@22,(Type=_FILE_INFO_BY_HANDLE_CLASS),@22,@19]))" Category="CodeSchema_Method" Bounds="632.913721368987,-700.302832405939,223.173333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetFileInformationByHandleEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetLocaleInfoA_stat OverloadingParameters=[@27,@12,@19,@11,@13]))" Category="CodeSchema_Method" Bounds="-251.863295918204,144.297204929266,168.866666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetLocaleInfoA_stat" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetLocaleInfoEx OverloadingParameters=[@12,@19,@21,@13]))" Category="CodeSchema_Method" Bounds="404.213714622342,-66.2622719283222,148.013333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetLocaleInfoEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetLogicalProcessorInformation OverloadingParameters=[(Type=&quot;_SYSTEM_LOGICAL_PROCESSOR_INFORMATION *&quot;),(Type=&quot;unsigned long *&quot;)]))" Category="CodeSchema_Method" Bounds="-1011.16827819811,-645.302832405939,229.29,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetLogicalProcessorInformation" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetStringTypeA_stat OverloadingParameters=[@27,@19,@25,@13,@21,@13,@13]))" Category="CodeSchema_Method" Bounds="346.233670748463,144.297153352525,171.916666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetStringTypeA_stat" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetTickCount64 @10))" Category="CodeSchema_Method" Bounds="227.780281289008,-66.2622719283222,146.433333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetTickCount64" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetTimeFormatEx OverloadingParameters=[@12,@19,(Type=&quot;const _SYSTEMTIME *&quot;),@12,@21,@13]))" Category="CodeSchema_Method" Bounds="-460.430072994225,99.9399632790685,157.03,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetTimeFormatEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtGetUserDefaultLocaleName OverloadingParameters=[@21,@13]))" Category="CodeSchema_Method" Bounds="358.983309129383,-755.302849121094,206.006666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetUserDefaultLocaleName" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtInitializeCriticalSectionEx OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;),@19,@19]))" Category="CodeSchema_Method" Bounds="634.753814514158,196.937253352525,194.876666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtInitializeCriticalSectionEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtIsBadReadPtr OverloadingParameters=[(Type=&quot;const void *&quot;),@16]))" Category="CodeSchema_Method" Bounds="795.997298629323,-171.542471928322,133.79,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtIsBadReadPtr" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtIsValidLocaleName OverloadingParameters=[@12]))" Category="CodeSchema_Method" Bounds="290.690327005775,91.6570533525245,161.68,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtIsValidLocaleName" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtLCMapStringA_stat OverloadingParameters=[@27,@12,@19,@25,@13,@11,@13,@13,@13]))" Category="CodeSchema_Method" Bounds="482.370427005775,91.6570533525245,162.863333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtLCMapStringA_stat" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtLCMapStringEx OverloadingParameters=[@12,@19,@12,@13,@21,@13]))" Category="CodeSchema_Method" Bounds="532.790495228195,-118.902371928322,142.01,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtLCMapStringEx" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtMessageBoxW OverloadingParameters=[@12,@12,@16]))" Category="CodeSchema_Method" Bounds="-312.693338105138,-110.620436720931,137.783333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtMessageBoxW" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtMessageWindowA OverloadingParameters=[@13,@22,@25,@25,@25,@25]))" Category="CodeSchema_Method" Bounds="-646.463506327559,99.9399632790685,156.033333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtMessageWindowA" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtMessageWindowW OverloadingParameters=[@13,@22,@12,@12,@12,@12]))" Category="CodeSchema_Method" Bounds="101.483560339108,91.6570275641538,159.206666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtMessageWindowW" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtSetFileInformationByHandle OverloadingParameters=[@22,(Type=_FILE_INFO_BY_HANDLE_CLASS),@22,@19]))" Category="CodeSchema_Method" Bounds="-91.9132452976794,-700.302832405939,209.49,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtSetFileInformationByHandle" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtSetUnhandledExceptionFilter OverloadingParameters=[(Type=&quot;long (*)(_EXCEPTION_POINTERS *)&quot;)]))" Category="CodeSchema_Method" Bounds="389.636954702321,-700.302832405939,213.276666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtSetUnhandledExceptionFilter" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtSleep @20))" Category="CodeSchema_Method" Bounds="-646.463747158469,-531.741236720931,92.0166666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtSleep" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtTerminateProcess @17))" Category="CodeSchema_Method" Bounds="639.793865374508,-13.6221719283222,155.79,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtTerminateProcess" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtUnhandledException OverloadingParameters=[(Type=&quot;_EXCEPTION_POINTERS *&quot;)]))" Category="CodeSchema_Method" Bounds="-52.9965292515369,144.297127564154,169.46,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtUnhandledException" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__crtsetenv OverloadingParameters=[(Type=&quot;char * *&quot;),(Type=&quot;const int&quot;)]))" Category="CodeSchema_Method" Bounds="595.973919508197,-540.023171928322,97.8233333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtsetenv" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__freeCrtMemory @10))" Category="CodeSchema_Method" Bounds="598.610536260548,-224.182571928322,127.49,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__freeCrtMemory" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__get_qualified_locale OverloadingParameters=[(Type=&quot;tagLC_STRINGS * const&quot;),@18,(Type=&quot;tagLC_STRINGS *&quot;)]))" Category="CodeSchema_Method" Bounds="-97.8180064277683,-12.791013294001,153.31,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__get_qualified_locale" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__get_qualified_locale_downlevel OverloadingParameters=[(Type=&quot;tagLC_STRINGS * const&quot;),@18,(Type=&quot;tagLC_STRINGS *&quot;)]))" Category="CodeSchema_Method" Bounds="147.576854702321,-700.302832405939,212.06,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__get_qualified_locale_downlevel" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__getlocaleinfo OverloadingParameters=[@27,@13,@12,@19,@22]))" Category="CodeSchema_Method" Bounds="364.610376546133,-329.462772411432,115.286666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__getlocaleinfo" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__init_ctype OverloadingParameters=[(Type=&quot;threadlocaleinfostruct *&quot;)]))" Category="CodeSchema_Method" Bounds="1.45013060377582,-487.382946291238,100.57,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__init_ctype" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__lock_fhandle @14))" Category="CodeSchema_Method" Bounds="74.1868432127991,-329.462771928322,115.173333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__lock_fhandle" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=__raise_securityfailure OverloadingParameters=[(Type=&quot;_EXCEPTION_POINTERS *&quot;)]))" Category="CodeSchema_Method" Bounds="454.820432041175,-13.6221719283222,154.973333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__raise_securityfailure" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_beginthreadex OverloadingParameters=[@22,@16,(Type=&quot;unsigned int (*)(void *)&quot;),@22,@16,@18]))" Category="CodeSchema_Method" Bounds="802.277343212799,-329.46280555047,117.59,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_beginthreadex" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_call_reportfault OverloadingParameters=[@13,@19,@19]))" Category="CodeSchema_Method" Bounds="252.220340787322,-276.822672411432,121.993333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_call_reportfault" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_callnewh @17))" Category="CodeSchema_Method" Bounds="651.732439299597,-592.663271928322,87.8533333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_callnewh" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_chsize_nolock OverloadingParameters=[@13,(Type=&quot;long long&quot;)]))" Category="CodeSchema_Method" Bounds="-360.666790120534,-321.180836720931,114.793333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_chsize_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_close_nolock @14))" Category="CodeSchema_Method" Bounds="-230.621495756789,-381.271713294001,109.063333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_close_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_commit @14))" Category="CodeSchema_Method" Bounds="-863.40827819811,-592.662817757501,81.53,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_commit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_createThread OverloadingParameters=[@29,@16,@22,@16,(Type=&quot;unsigned long *&quot;)]))" Category="CodeSchema_Method" Bounds="469.240472429149,-382.102820198908,111.556666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_createThread" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_create_locale OverloadingParameters=[@13,@25]))" Category="CodeSchema_Method" Bounds="610.797239095816,-382.102871928322,111.703333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_create_locale" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_endthreadex @17))" Category="CodeSchema_Method" Bounds="-646.463660904184,-373.820936720931,108.256666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_endthreadex" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_expand_base OverloadingParameters=[@22,@16]))" Category="CodeSchema_Method" Bounds="752.500672429149,-382.102871928322,111.706666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_expand_base" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_expandlocale OverloadingParameters=[@12,@21,@16,@21,@16,@18]))" Category="CodeSchema_Method" Bounds="187.493605762483,-382.102871928322,110.633333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_expandlocale" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_free_base @23))" Category="CodeSchema_Method" Bounds="-156.68814685949,-539.192013294001,94.0566666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_free_base" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_free_osfhnd @14))" Category="CodeSchema_Method" Bounds="-646.463656345043,-426.461036720931,104.743333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_free_osfhnd" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_ftell_nolock @9))" Category="CodeSchema_Method" Bounds="525.573863937109,-487.383071928322,102.516666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_ftell_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_ftelli64_nolock @9))" Category="CodeSchema_Method" Bounds="-498.263492546011,-268.540736720931,118.596666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_ftelli64_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_heap_alloc_base @17))" Category="CodeSchema_Method" Bounds="-329.660068037344,-163.260536720931,129.373333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_heap_alloc_base" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_initMTAoncurrentthread @10))" Category="CodeSchema_Method" Bounds="675.233860339108,91.6570533525245,165.956666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_initMTAoncurrentthread" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_init_pointers @10))" Category="CodeSchema_Method" Bounds="580.683910321624,-434.742971928322,107.986666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_init_pointers" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_initp_eh_hooks @23))" Category="CodeSchema_Method" Bounds="404.213774120655,-276.822671928322,122.26,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_initp_eh_hooks" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_initp_misc_cfltcvt_tab @10))" Category="CodeSchema_Method" Bounds="-86.1632063275587,91.6571049292661,157.646666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_initp_misc_cfltcvt_tab" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_invalid_parameter OverloadingParameters=[@12,@12,@12,@16,@16]))" Category="CodeSchema_Method" Bounds="-480.393438105139,-110.620436720931,137.7,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_invalid_parameter" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_is_LFH_enabled @10))" Category="CodeSchema_Method" Bounds="-492.643497072785,-215.900636720931,124.73,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_is_LFH_enabled" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_lock @14))" Category="CodeSchema_Method" Bounds="-255.552769713087,-644.472213294001,63.3533333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_lock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_lock_file @9))" Category="CodeSchema_Method" Bounds="67.7191059662636,-592.663271928322,85.5266666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_lock_file" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_lock_file2 OverloadingParameters=[@13,@22]))" Category="CodeSchema_Method" Bounds="-524.446980491803,-531.741236720931,92.14,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_lock_file2" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_lockerr_exit OverloadingParameters=[@11]))" Category="CodeSchema_Method" Bounds="791.337397270443,-487.383071928322,104.336666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_lockerr_exit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_lseek_nolock OverloadingParameters=[@13,@26,@13]))" Category="CodeSchema_Method" Bounds="47.8135057624827,-382.102820198908,109.68,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_lseek_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_lseeki64_nolock OverloadingParameters=[@13,(Type=&quot;long long&quot;),@13]))" Category="CodeSchema_Method" Bounds="-28.0113320426975,-223.351413294001,125.76,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_lseeki64_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_mbstowcs_l_helper OverloadingParameters=[(Type=&quot;wchar_t *&quot;),@25,@16,@27]))" Category="CodeSchema_Method" Bounds="-646.463552044325,-57.9803367209314,143.213333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_mbstowcs_l_helper" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_mbtowc_l OverloadingParameters=[(Type=&quot;wchar_t *&quot;),@25,@16,@27]))" Category="CodeSchema_Method" Bounds="-279.704916726434,-539.192013294001,93.0166666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_mbtowc_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_onexit_nolock OverloadingParameters=[(Type=&quot;int (*)()&quot;)]))" Category="CodeSchema_Method" Bounds="-70.8613916918471,-328.631613294001,115.053333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_onexit_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_open_osfhandle OverloadingParameters=[@13,@13]))" Category="CodeSchema_Method" Bounds="-183.134768309279,-223.351413294001,125.123333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_open_osfhandle" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_output_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@25,@27,@11]))" Category="CodeSchema_Method" Bounds="183.24587263293,-592.663271928322,86.2266666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_output_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_output_p_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@25,@27,@11]))" Category="CodeSchema_Method" Bounds="-517.776936062891,-479.101136720931,99.32,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_output_p_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_output_s_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@25,@27,@11]))" Category="CodeSchema_Method" Bounds="851.624119508198,-540.023171928322,98.26,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_output_s_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_putwch_nolock OverloadingParameters=[@24]))" Category="CodeSchema_Method" Bounds="-50.021329537713,-275.991513294001,120.526666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_putwch_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_raise_exc_ex OverloadingParameters=[(Type=&quot;_FPIEEE_RECORD *&quot;),@18,@13,@13,@22,@22,@13]))" Category="CodeSchema_Method" Bounds="328.127039095816,-382.102872411432,111.113333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_raise_exc_ex" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_read_nolock OverloadingParameters=[@13,@22,@16]))" Category="CodeSchema_Method" Bounds="-105.964725482944,-433.911813294001,106.22,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_read_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_realloc_base OverloadingParameters=[@22,@16]))" Category="CodeSchema_Method" Bounds="304.850376988291,-434.742971928322,107.89,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_realloc_base" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_set_invalid_parameter_handler OverloadingParameters=[(Type=&quot;void (*)(const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, unsigned int)&quot;)]))" Category="CodeSchema_Method" Bounds="594.990075796049,-755.302849121094,206.013333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_set_invalid_parameter_handler" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_set_new_handler OverloadingParameters=[(Type=&quot;int (*)(unsigned int)&quot;)]))" Category="CodeSchema_Method" Bounds="633.783865295989,-171.542471928322,132.213333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_set_new_handler" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_set_osfhnd OverloadingParameters=[@13,@13]))" Category="CodeSchema_Method" Bounds="-258.751544940952,-486.551913294001,99.97,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_set_osfhnd" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_set_purecall_handler OverloadingParameters=[(Type=&quot;void (*)()&quot;)]))" Category="CodeSchema_Method" Bounds="762.460581289009,-66.2622719283222,151.993333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_set_purecall_handler" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_setmbcp_nolock OverloadingParameters=[@13,(Type=&quot;threadmbcinfostruct *&quot;)]))" Category="CodeSchema_Method" Bounds="441.540436260548,-224.182571928322,127.07,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_setmbcp_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_threadstartex @23))" Category="CodeSchema_Method" Bounds="-503.963556787201,-321.180836720931,113.296666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_threadstartex" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_time64 OverloadingParameters=[(Type=&quot;long long *&quot;)]))" Category="CodeSchema_Method" Bounds="759.35637263293,-645.303371928322,79.1033333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_time64" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_uninitMTAoncurrentthread @10))" Category="CodeSchema_Method" Bounds="-437.640018819176,205.220163279069,179.116666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_uninitMTAoncurrentthread" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_unlock @14))" Category="CodeSchema_Method" Bounds="438.592739299597,-645.303371928322,76.5133333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_unlock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_unlock_fhandle @14))" Category="CodeSchema_Method" Bounds="100.500240787322,-276.822671928322,121.72,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_unlock_fhandle" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_unlock_file @9))" Category="CodeSchema_Method" Bounds="-646.463702729557,-479.101136720931,98.6866666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_unlock_file" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_unlock_file2 OverloadingParameters=[@13,@22]))" Category="CodeSchema_Method" Bounds="-376.67012301171,-426.461036720931,105.3,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_unlock_file2" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_wcstof_l OverloadingParameters=[@12,(Type=&quot;wchar_t * *&quot;),@27]))" Category="CodeSchema_Method" Bounds="-47.7776607004031,-592.663146291238,85.4966666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_wcstof_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_wcstombs_l_helper OverloadingParameters=[@11,@12,@16,@27]))" Category="CodeSchema_Method" Bounds="-473.250118710992,-57.9803367209314,143.213333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_wcstombs_l_helper" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_wctomb_s_l OverloadingParameters=[@28,@11,@16,@24,@27]))" Category="CodeSchema_Method" Bounds="-511.720223011709,-426.461036720931,105.05,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_wctomb_s_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_woutput_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@12,@27,@11]))" Category="CodeSchema_Method" Bounds="92.0068528415308,-540.023171928322,94.7366666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_woutput_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_woutput_p_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@12,@27,@11]))" Category="CodeSchema_Method" Bounds="167.020276988291,-434.742971928322,107.83,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_woutput_p_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_woutput_s_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@12,@27,@11]))" Category="CodeSchema_Method" Bounds="30.2501769882905,-434.742834847345,106.77,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_woutput_s_l" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_write_nolock OverloadingParameters=[@13,(Type=&quot;const void *&quot;),@16]))" Category="CodeSchema_Method" Bounds="-369.580127570851,-373.820936720931,108.953333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_write_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=_wsopen_nolock OverloadingParameters=[@28,@28,@12,@13,@13,@13,@13]))" Category="CodeSchema_Method" Bounds="708.810640787322,-276.822671928322,122.36,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_wsopen_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=ctrlevent_capture @20))" Category="CodeSchema_Method" Bounds="756.100636260548,-224.182571928322,128.1,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="ctrlevent_capture" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=doexit OverloadingParameters=[@13,@13,@13]))" Category="CodeSchema_Method" Bounds="-65.7710940337364,-645.303246291238,68.0933333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="doexit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=failwithmessage OverloadingParameters=[@22,@13,@13,@25]))" Category="CodeSchema_Method" Bounds="-349.666725879345,-268.540736720931,119.726666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="failwithmessage" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=getSystemCP @14))" Category="CodeSchema_Method" Bounds="-241.364829853061,-433.911813294001,105.4,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="getSystemCP" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=iswctype OverloadingParameters=[(Type=&quot;unsigned short&quot;),(Type=&quot;unsigned short&quot;)]))" Category="CodeSchema_Method" Bounds="868.459805966264,-645.303371928322,81.13,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="iswctype" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=raise @14))" Category="CodeSchema_Method" Bounds="-346.706202940626,-644.472213294001,61.1533333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="raise" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=rand_s OverloadingParameters=[@18]))" Category="CodeSchema_Method" Bounds="130.48577263293,-645.303371928322,71.7766666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="rand_s" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=setSBUpLow OverloadingParameters=[(Type=&quot;threadmbcinfostruct *&quot;)]))" Category="CodeSchema_Method" Bounds="132.020230603776,-487.383071928322,100.66,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="setSBUpLow" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=(Name=signal OverloadingParameters=[@13,(Type=&quot;void (*)(int)&quot;)]))" Category="CodeSchema_Method" Bounds="-162.199329466505,-644.472213294001,66.4333333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="signal" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=GetPdbDll)" Category="CodeSchema_Method" Bounds="532.37617263293,-592.663271928322,87.3066666666668,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="GetPdbDll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=GetPdbDllFromInstallPath)" Category="CodeSchema_Method" Bounds="146.463570748463,144.297150809393,169.77,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="GetPdbDllFromInstallPath" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__crtGetEnvironmentStringsA)" Category="CodeSchema_Method" Bounds="412.647047847491,196.937253352525,192.106666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetEnvironmentStringsA" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__crtGetShowWindowMode)" Category="CodeSchema_Method" Bounds="-646.463452152509,205.220163279069,178.823333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtGetShowWindowMode" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__crtLoadWinApiPointers)" Category="CodeSchema_Method" Bounds="-646.463495918204,152.580063279069,166.336666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__crtLoadWinApiPointers" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__get_sigabrt)" Category="CodeSchema_Method" Bounds="-508.206894237517,-373.820936720931,108.626666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__get_sigabrt" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__initconout)" Category="CodeSchema_Method" Bounds="262.680330603776,-487.383071928322,100.913333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__initconout" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__onexitinit)" Category="CodeSchema_Method" Bounds="468.170486174864,-540.023171928322,97.8033333333334,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__onexitinit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__security_init_cookie)" Category="CodeSchema_Method" Bounds="-281.066634625492,-5.34023672093139,153.243333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__security_init_cookie" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__termconout)" Category="CodeSchema_Method" Bounds="-91.5580658353204,-381.271713294001,109.376666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__termconout" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__threadhandle)" Category="CodeSchema_Method" Bounds="-646.463592546011,-268.540736720931,118.2,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__threadhandle" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__threadid)" Category="CodeSchema_Method" Bounds="-402.306880491803,-531.741236720931,92.5966666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__threadid" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__tmainCRTStartup)" Category="CodeSchema_Method" Bounds="23.9887268180813,-118.071213294001,139.07,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__tmainCRTStartup" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=__wtomb_environ)" Category="CodeSchema_Method" Bounds="-10.5646695976292,-170.711313294001,130.47,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="__wtomb_environ" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_alloc_osfhnd)" Category="CodeSchema_Method" Bounds="442.740476988291,-434.742972411432,107.943333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_alloc_osfhnd" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_fcloseall)" Category="CodeSchema_Method" Bounds="-162.199223367059,-591.832113294001,84.4266666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_fcloseall" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_get_invalid_parameter_handler)" Category="CodeSchema_Method" Bounds="-328.981464781447,-697.112313294001,207.073333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_get_invalid_parameter_handler" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_get_purecall_handler)" Category="CodeSchema_Method" Bounds="-464.120067958825,-5.34023672093139,153.053333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_get_purecall_handler" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_getptd_noexit)" Category="CodeSchema_Method" Bounds="219.360276546132,-329.462771928322,115.25,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_getptd_noexit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_getstream)" Category="CodeSchema_Method" Bounds="342.270386174864,-540.023171928322,95.9,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_getstream" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_heap_init)" Category="CodeSchema_Method" Bounds="889.34597263293,-592.663271928322,91.1133333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_heap_init" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_heapchk)" Category="CodeSchema_Method" Bounds="299.472639299597,-592.663271928322,86.27,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_heapchk" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_inconsistency)" Category="CodeSchema_Method" Bounds="-646.463656787201,-321.180836720931,112.5,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_inconsistency" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_ioinit)" Category="CodeSchema_Method" Bounds="32.3223392995969,-645.303371928322,68.1633333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_ioinit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_ioterm)" Category="CodeSchema_Method" Bounds="545.10617263293,-645.303371928322,76.6266666666666,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_ioterm" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_mtdeletelocks)" Category="CodeSchema_Method" Bounds="-215.868152505242,-328.631613294001,115.006666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_mtdeletelocks" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_mtinit)" Category="CodeSchema_Method" Bounds="335.382639299597,-645.303371928322,73.21,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_mtinit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_purecall)" Category="CodeSchema_Method" Bounds="-310.917900531772,-591.832113294001,83.68,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_purecall" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_query_new_handler)" Category="CodeSchema_Method" Bounds="-124.928052712762,-65.4311132940009,146.346666666667,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_query_new_handler" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_setargv)" Category="CodeSchema_Method" Bounds="-534.93321855004,-584.381336720931,81.6433333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_setargv" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Member=_tzset_nolock)" Category="CodeSchema_Method" Bounds="718.670676988291,-434.742971928322,108.133333333333,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="_tzset_nolock" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Type=SocketSelect)" Category="CodeSchema_Class" Bounds="-33.9135575372841,-755.302839992601,128.163333333333,25" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SocketSelect" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Type=_Init_atexit)" Category="CodeSchema_Struct" Bounds="-183.690324203951,-755.302894556847,119.776666666667,25" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="_Init_atexit" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(@1 @7 Type=webserver Member=(Name=Request @23))" Category="CodeSchema_Method" Bounds="-311.890424203951,-769.752413294,78.2,22.64" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Request" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-1051.16827819811,-989.941470054264,2071.62758416437,1257.80163333333" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" FilePath="$(bd9847d4-c040-453f-9605-c8fc1b1c0ef2.OutputPath)" Group="Expanded" Label="webserver.exe" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.exe" />
+    </Node>
+    <Node Id="@31" Category="CodeSchema_Class" Bounds="-751.709802601315,-854.941470054264,346.440008951823,240.5605" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="9" Group="Expanded" Label="Socket" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
+    <Node Id="@32" Category="CodeSchema_Class" Bounds="-719.52084535478,-909.941470054264,126.133333333333,25" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SocketClient" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@33" Category="CodeSchema_Class" Bounds="-563.387412021446,-909.941470054264,130.82,25" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SocketServer" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@34" Category="CodeSchema_Class" Bounds="-331.890424203951,-809.752413294,118.2,82.6399999999999" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Expanded" Label="webserver" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="-70.5318192408944,392.857795825467,110.356666666667,25" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" FilePath="$(SystemRoot)\SysWOW64\KERNEL32.dll" Label="KERNEL32.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="-70.5318196986581,337.857795825467,99.8166666666667,25" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" FilePath="$(SystemRoot)\SysWOW64\WS2_32.dll" Label="WS2_32.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="-1031.16827819811,-949.941470054264,2031.62758416437,1197.80163333333" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="181" Group="Expanded" Label="‎::" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
+    <Node Id="_standardGraphExternalsGroup" Category="Externals" Bounds="-90.5318196986581,297.860163279069,150.35666712443,140.0003" Group="Expanded" Label="Externals" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="@2" Target="@4" Category="CodeSchema_Calls" />
+    <Link Source="@2" Target="@6" Category="CodeSchema_Calls" />
+    <Link Source="@2" Target="@8" Category="Contains" FetchingParent="@2" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=(Name=ReceiveLine @14))" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=(Name=SendBytes OverloadingParameters=[(Type=&quot;const std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &amp;&quot;)]))" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=(Name=SendLine OverloadingParameters=[(Type=&quot;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;&quot;)]))" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=Close)" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=End)" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=ReceiveBytes)" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=ReceiveLine)" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=Socket)" Category="Contains" FetchingParent="@31" />
+    <Link Source="@31" Target="(@1 @7 @30 Member=Start)" Category="Contains" FetchingParent="@31" />
+    <Link Source="@32" Target="@31" Category="CodeSchema_BasedOn" Bounds="-650.533193424766,-884.941470054264,10.4914021973989,21.884752297296" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@33" Target="@31" Category="CodeSchema_BasedOn" Bounds="-515.063958239596,-884.941470054264,10.8380084414417,21.9318027448965" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@34" Target="(@1 @7 Type=webserver Member=(Name=Request @23))" Category="Contains" FetchingParent="@34" />
+    <Link Source="@8" Target="(@1 @7 Member=&quot;Unknown Methods&quot;)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=CountryEnumProc OverloadingParameters=[@21]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=DebuggerProbe @20))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=DebuggerRuntime OverloadingParameters=[@19,@13,@22,@12]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=FindHandlerForForeignException OverloadingParameters=[(Type=&quot;EHExceptionRecord *&quot;),(Type=&quot;EHRegistrationNode *&quot;),(Type=&quot;_CONTEXT *&quot;),@22,(Type=&quot;const _s_FuncInfo *&quot;),@13,@13,(Type=&quot;EHRegistrationNode *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=GetLcidFromCountry @15))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=GetLcidFromDefault @15))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=GetLcidFromLangCountry @15))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=GetLcidFromLanguage @15))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=LangCountryEnumProc OverloadingParameters=[@21]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=LanguageEnumProc OverloadingParameters=[@21]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=ProcessCodePage OverloadingParameters=[@21,(Type=&quot;setloc_struct *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=TestDefaultLanguage OverloadingParameters=[@19,@13,(Type=&quot;setloc_downlevel_struct *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Atexit OverloadingParameters=[(Type=&quot;void (*)()&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_CrtIsValidHeapPointer OverloadingParameters=[(Type=&quot;const void *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_CrtSetReportFile OverloadingParameters=[@13,@22]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_CxxThrowException OverloadingParameters=[@22,(Type=&quot;const _s__ThrowInfo *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Getwctype OverloadingParameters=[@24,(Type=&quot;const _Ctypevec *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Getwctypes OverloadingParameters=[@12,@12,(Type=&quot;short *&quot;),(Type=&quot;const _Ctypevec *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Mbrtowc OverloadingParameters=[@21,@25,@16,@28,(Type=&quot;const _Cvtvec *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Mtxdst OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Mtxlock OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Mtxunlock OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_NMSG_WRITE @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_RTC_AllocaFailure OverloadingParameters=[@22,(Type=&quot;_RTC_ALLOCA_NODE *&quot;),@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_RTC_GetSrcLine OverloadingParameters=[(Type=&quot;unsigned char *&quot;),(Type=&quot;wchar_t *&quot;),@19,@28,(Type=&quot;wchar_t *&quot;),@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Strftime_l OverloadingParameters=[@11,@16,@25,(Type=&quot;const tm *&quot;),@22,@27]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_UnwindNestedFrames OverloadingParameters=[(Type=&quot;EHRegistrationNode *&quot;),(Type=&quot;EHExceptionRecord *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_VCrtDbgReportA OverloadingParameters=[@13,@22,@25,@13,@25,@25,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_VCrtDbgReportW OverloadingParameters=[@13,@22,@12,@13,@12,@12,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_Wcrtomb OverloadingParameters=[@11,@24,@28,(Type=&quot;const _Cvtvec *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__copy_path_to_wide_string OverloadingParameters=[@25,(Type=&quot;unsigned short * *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__copy_to_char OverloadingParameters=[@12,(Type=&quot;char * *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__createFile OverloadingParameters=[@12,@19,@19,@29,@19,@19,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtCompareStringA_stat OverloadingParameters=[@27,@12,@19,@25,@13,@25,@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtCompareStringEx OverloadingParameters=[@12,@19,@12,@13,@12,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtCorExitProcess @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtCreateEventExW OverloadingParameters=[@29,@12,@19,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtCreateSemaphoreExW OverloadingParameters=[@29,@26,@26,@12,@19,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtCreateSymbolicLinkW OverloadingParameters=[@12,@12,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtEnumSystemLocalesEx OverloadingParameters=[(Type=&quot;int (*)(unsigned short *, unsigned long, long)&quot;),@19,@26]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtExitProcess @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtFlsAlloc OverloadingParameters=[(Type=&quot;void (*)(void *)&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtFlsFree @20))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtFlsGetValue @20))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtFlsSetValue OverloadingParameters=[@19,@22]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetDateFormatEx OverloadingParameters=[@12,@19,(Type=&quot;const _SYSTEMTIME *&quot;),@12,@21,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetFileInformationByHandleEx OverloadingParameters=[@22,(Type=_FILE_INFO_BY_HANDLE_CLASS),@22,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetLocaleInfoA_stat OverloadingParameters=[@27,@12,@19,@11,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetLocaleInfoEx OverloadingParameters=[@12,@19,@21,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetLogicalProcessorInformation OverloadingParameters=[(Type=&quot;_SYSTEM_LOGICAL_PROCESSOR_INFORMATION *&quot;),(Type=&quot;unsigned long *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetStringTypeA_stat OverloadingParameters=[@27,@19,@25,@13,@21,@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetTickCount64 @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetTimeFormatEx OverloadingParameters=[@12,@19,(Type=&quot;const _SYSTEMTIME *&quot;),@12,@21,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtGetUserDefaultLocaleName OverloadingParameters=[@21,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtInitializeCriticalSectionEx OverloadingParameters=[(Type=&quot;_RTL_CRITICAL_SECTION *&quot;),@19,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtIsBadReadPtr OverloadingParameters=[(Type=&quot;const void *&quot;),@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtIsValidLocaleName OverloadingParameters=[@12]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtLCMapStringA_stat OverloadingParameters=[@27,@12,@19,@25,@13,@11,@13,@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtLCMapStringEx OverloadingParameters=[@12,@19,@12,@13,@21,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtMessageBoxW OverloadingParameters=[@12,@12,@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtMessageWindowA OverloadingParameters=[@13,@22,@25,@25,@25,@25]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtMessageWindowW OverloadingParameters=[@13,@22,@12,@12,@12,@12]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtSetFileInformationByHandle OverloadingParameters=[@22,(Type=_FILE_INFO_BY_HANDLE_CLASS),@22,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtSetUnhandledExceptionFilter OverloadingParameters=[(Type=&quot;long (*)(_EXCEPTION_POINTERS *)&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtSleep @20))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtTerminateProcess @17))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtUnhandledException OverloadingParameters=[(Type=&quot;_EXCEPTION_POINTERS *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__crtsetenv OverloadingParameters=[(Type=&quot;char * *&quot;),(Type=&quot;const int&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__freeCrtMemory @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__get_qualified_locale OverloadingParameters=[(Type=&quot;tagLC_STRINGS * const&quot;),@18,(Type=&quot;tagLC_STRINGS *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__get_qualified_locale_downlevel OverloadingParameters=[(Type=&quot;tagLC_STRINGS * const&quot;),@18,(Type=&quot;tagLC_STRINGS *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__getlocaleinfo OverloadingParameters=[@27,@13,@12,@19,@22]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__init_ctype OverloadingParameters=[(Type=&quot;threadlocaleinfostruct *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__lock_fhandle @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=__raise_securityfailure OverloadingParameters=[(Type=&quot;_EXCEPTION_POINTERS *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_beginthreadex OverloadingParameters=[@22,@16,(Type=&quot;unsigned int (*)(void *)&quot;),@22,@16,@18]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_call_reportfault OverloadingParameters=[@13,@19,@19]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_callnewh @17))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_chsize_nolock OverloadingParameters=[@13,(Type=&quot;long long&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_close_nolock @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_commit @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_createThread OverloadingParameters=[@29,@16,@22,@16,(Type=&quot;unsigned long *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_create_locale OverloadingParameters=[@13,@25]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_endthreadex @17))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_expand_base OverloadingParameters=[@22,@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_expandlocale OverloadingParameters=[@12,@21,@16,@21,@16,@18]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_free_base @23))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_free_osfhnd @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_ftell_nolock @9))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_ftelli64_nolock @9))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_heap_alloc_base @17))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_initMTAoncurrentthread @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_init_pointers @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_initp_eh_hooks @23))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_initp_misc_cfltcvt_tab @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_invalid_parameter OverloadingParameters=[@12,@12,@12,@16,@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_is_LFH_enabled @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_lock @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_lock_file @9))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_lock_file2 OverloadingParameters=[@13,@22]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_lockerr_exit OverloadingParameters=[@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_lseek_nolock OverloadingParameters=[@13,@26,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_lseeki64_nolock OverloadingParameters=[@13,(Type=&quot;long long&quot;),@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_mbstowcs_l_helper OverloadingParameters=[(Type=&quot;wchar_t *&quot;),@25,@16,@27]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_mbtowc_l OverloadingParameters=[(Type=&quot;wchar_t *&quot;),@25,@16,@27]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_onexit_nolock OverloadingParameters=[(Type=&quot;int (*)()&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_open_osfhandle OverloadingParameters=[@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_output_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@25,@27,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_output_p_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@25,@27,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_output_s_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@25,@27,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_putwch_nolock OverloadingParameters=[@24]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_raise_exc_ex OverloadingParameters=[(Type=&quot;_FPIEEE_RECORD *&quot;),@18,@13,@13,@22,@22,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_read_nolock OverloadingParameters=[@13,@22,@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_realloc_base OverloadingParameters=[@22,@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_set_invalid_parameter_handler OverloadingParameters=[(Type=&quot;void (*)(const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, unsigned int)&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_set_new_handler OverloadingParameters=[(Type=&quot;int (*)(unsigned int)&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_set_osfhnd OverloadingParameters=[@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_set_purecall_handler OverloadingParameters=[(Type=&quot;void (*)()&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_setmbcp_nolock OverloadingParameters=[@13,(Type=&quot;threadmbcinfostruct *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_threadstartex @23))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_time64 OverloadingParameters=[(Type=&quot;long long *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_uninitMTAoncurrentthread @10))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_unlock @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_unlock_fhandle @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_unlock_file @9))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_unlock_file2 OverloadingParameters=[@13,@22]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_wcstof_l OverloadingParameters=[@12,(Type=&quot;wchar_t * *&quot;),@27]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_wcstombs_l_helper OverloadingParameters=[@11,@12,@16,@27]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_wctomb_s_l OverloadingParameters=[@28,@11,@16,@24,@27]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_woutput_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@12,@27,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_woutput_p_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@12,@27,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_woutput_s_l OverloadingParameters=[(Type=&quot;_iobuf *&quot;),@12,@27,@11]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_write_nolock OverloadingParameters=[@13,(Type=&quot;const void *&quot;),@16]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=_wsopen_nolock OverloadingParameters=[@28,@28,@12,@13,@13,@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=ctrlevent_capture @20))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=doexit OverloadingParameters=[@13,@13,@13]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=failwithmessage OverloadingParameters=[@22,@13,@13,@25]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=getSystemCP @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=iswctype OverloadingParameters=[(Type=&quot;unsigned short&quot;),(Type=&quot;unsigned short&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=raise @14))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=rand_s OverloadingParameters=[@18]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=setSBUpLow OverloadingParameters=[(Type=&quot;threadmbcinfostruct *&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=(Name=signal OverloadingParameters=[@13,(Type=&quot;void (*)(int)&quot;)]))" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=GetPdbDll)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=GetPdbDllFromInstallPath)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__crtGetEnvironmentStringsA)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__crtGetShowWindowMode)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__crtLoadWinApiPointers)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__get_sigabrt)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__initconout)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__onexitinit)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__security_init_cookie)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__termconout)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__threadhandle)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__threadid)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__tmainCRTStartup)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=__wtomb_environ)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_alloc_osfhnd)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_fcloseall)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_get_invalid_parameter_handler)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_get_purecall_handler)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_getptd_noexit)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_getstream)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_heap_init)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_heapchk)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_inconsistency)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_ioinit)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_ioterm)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_mtdeletelocks)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_mtinit)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_purecall)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_query_new_handler)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_setargv)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Member=_tzset_nolock)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Type=SocketSelect)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 @7 Type=_Init_atexit)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@31" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@32" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@33" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@34" Category="Contains" FetchingParent="@8" />
+    <Link Source="_standardGraphExternalsGroup" Target="@4" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@6" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
+    <Category Id="CodeSchema_BasedOn" Label="Based On" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Based On Source" OutgoingActionLabel="Based On" />
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_Struct" Label="Struct" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Struct" NavigationActionLabel="Structs" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Externals" Label="Externals" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Externals" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="FileSystem.Category.FileOfType.exe" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsExternal" Label="Is External" Description="Flag indicating whether this node is considered external" DataType="System.Boolean" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(bd9847d4-c040-453f-9605-c8fc1b1c0ef2.OutputPathUri)" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=$(SystemRootUri)/SysWOW64/KERNEL32.dll" />
+    <Alias n="4" Id="(@3)" />
+    <Alias n="5" Uri="Assembly=$(SystemRootUri)/SysWOW64/WS2_32.dll" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Id="Namespace=::" />
+    <Alias n="8" Id="(@1 @7)" />
+    <Alias n="9" Id="OverloadingParameters=[(Type=&quot;_iobuf *&quot;)]" />
+    <Alias n="10" Id="OverloadingParameters=[(Type=&lt;NoType&gt;)]" />
+    <Alias n="11" Id="(Type=&quot;char *&quot;)" />
+    <Alias n="12" Id="(Type=&quot;const wchar_t *&quot;)" />
+    <Alias n="13" Id="(Type=int)" />
+    <Alias n="14" Id="OverloadingParameters=[@13]" />
+    <Alias n="15" Id="OverloadingParameters=[(Type=&quot;setloc_downlevel_struct *&quot;)]" />
+    <Alias n="16" Id="(Type=&quot;unsigned int&quot;)" />
+    <Alias n="17" Id="OverloadingParameters=[@16]" />
+    <Alias n="18" Id="(Type=&quot;unsigned int *&quot;)" />
+    <Alias n="19" Id="(Type=&quot;unsigned long&quot;)" />
+    <Alias n="20" Id="OverloadingParameters=[@19]" />
+    <Alias n="21" Id="(Type=&quot;unsigned short *&quot;)" />
+    <Alias n="22" Id="(Type=&quot;void *&quot;)" />
+    <Alias n="23" Id="OverloadingParameters=[@22]" />
+    <Alias n="24" Id="(Type=wchar_t)" />
+    <Alias n="25" Id="(Type=&quot;const char *&quot;)" />
+    <Alias n="26" Id="(Type=long)" />
+    <Alias n="27" Id="(Type=&quot;localeinfo_struct *&quot;)" />
+    <Alias n="28" Id="(Type=&quot;int *&quot;)" />
+    <Alias n="29" Id="(Type=&quot;_SECURITY_ATTRIBUTES *&quot;)" />
+    <Alias n="30" Id="Type=Socket" />
+    <Alias n="31" Id="(@1 @7 @30)" />
+    <Alias n="32" Id="(@1 @7 Type=SocketClient)" />
+    <Alias n="33" Id="(@1 @7 Type=SocketServer)" />
+    <Alias n="34" Id="(@1 @7 Type=webserver)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="True">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="bd9847d4-c040-453f-9605-c8fc1b1c0ef2.OutputPath" Value="C:\Users\Tim\Documents\Visual Studio 2013\Projects\BitBet Server\Debug\webserver.exe" />
+    <Path Id="bd9847d4-c040-453f-9605-c8fc1b1c0ef2.OutputPathUri" Value="file:///C:/Users/Tim/Documents/Visual Studio 2013/Projects/BitBet Server/Debug/webserver.exe" />
+    <Path Id="SystemRoot" Value="C:\Windows" />
+    <Path Id="SystemRootUri" Value="file:///C:/Windows" />
+  </Paths>
+</DirectedGraph>

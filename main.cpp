@@ -15,6 +15,7 @@
 #include "LoadingClass.h"
 #include "HTMLVariables.h"
 #include "AdminPanel.h"
+#include "Message.h"
 
 
 
@@ -65,6 +66,10 @@ void Get(webserver::http_request* r) {
   std::string bgcolor="#ffffff";
   std::string links;
   currentSessionID = r->params_["session"];
+
+  Message msg;
+
+  std::cout << msg.filterMessageContent("not html<html> very html</html> <");
 
   HTMLVariables HTMLvars;
   HTMLVariables entryVars;
